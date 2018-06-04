@@ -13,7 +13,16 @@ body {
 li {
 	list-style: none;
 }
-
+.clearfix:before, .clearfix:after {
+			content: "";
+			display: table;
+		}
+		.clearfix:after {
+			clear: both;
+		}
+		.clearfix {
+			*zoom: 1;
+		}
 .header {
 	height: 100px;
 	background-color: #fff;
@@ -33,6 +42,10 @@ li {
 
 .nav {
 	float: right;
+}
+
+.nav ul {
+	overflow: hidden;
 }
 
 .nav li {
@@ -80,4 +93,61 @@ li {
 	color: #666666;
 	line-height: 26px;
 	text-align: center;
+}
+.serivice-bd {
+	margin:50px auto 0;
+	border: 1px solid #e7e8e9;
+
+}
+.service-bd li {
+	height: 510px;
+	width: 315px;
+	background-color: #fff;
+	float: left;
+	border: 1px solid #e7e8e9;
+}
+
+
+.service-bd img {
+	width: 251px;
+	height: 148px;
+	margin: 36px 35px;
+}
+
+.service-bd h3 {
+	font-size: 18px;
+	color: #333333;
+	text-align: center;
+	font-weight: normal;
+}
+
+.service-bd p {
+	font-size: 11px;
+	color: #666666;
+	width: 235px;
+	line-height: 30px;
+	margin: 0px auto;
+}
+
+ .service-bd a {
+ 	width: 148px;
+ 	height: 36px;
+ 	display: block;
+ 	border: 1px solid #ff9412;
+ 	color: #ff9412;
+ 	font-size: 12px;
+ 	margin: 35px auto;
+ 	text-align: center;
+ 	text-decoration: none;
+ 	line-height: 36px;
+ 	border-radius: 2px;
+ }
+
+ .service-bd a:hover {
+ 	color: #fff;
+ 	background-color: #ff9412
+ }
+
+ .box2 {
+	margin: 0 45px;
 }
