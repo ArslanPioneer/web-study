@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.clearfix:before, .clearfix:after {
+			content: "";
+			display: table;
+		}
+		.clearfix:after {
+			clear: both;
+		}
+		.clearfix {
+			*zoom: 1;
+		}
+		.father {
+			border:1px solid red;
+			width: 400px;
+			/*overflow: hidden;*/
+		}
+
+		.big {
+			height: 200px;
+			width: 300px;
+			float: left;
+			background-color: green;
+		}
+
+		.small {
+			height: 250px;
+			width: 100px;
+			float: left;
+			background-color: pink;
+		}
+
+		.footer {
+			width: 400px;
+			height: 100px;
+			background-color: black;
+		}
+
+		 
+		 
+	</style>
+</head>
+<body>
+		<div class="father clearfix">
+			<div class="big"></div>
+			<div class="small"></div>
+			 
+		</div>
+		<div class="footer">
+			
+		</div>
+</body>
+</html>
