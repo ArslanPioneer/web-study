@@ -9,68 +9,70 @@
 			padding: 0;
 		}
 
-		ul {
+		li {
 			list-style: none;
 		}
-		.tb	{
-				width: 520px;
-				height: 280px;
-				margin: 50px auto;
-				position: relative;
+		.tb {
+			width: 520px;
+			height: 280px;
+			margin: 50px auto;
+			position: relative;
 		}
-		.tb a {
-			width: 24px;
-			height: 36px;
-			display: block;
-		/*	background-color: pink;*/
-			position: absolute;
-			top: 50%;
-			margin-top:-18px;
+		
+		.right {
+			 width: 24px;
+			 height: 36px;
+			 position: absolute;
+			 top: 50%;
+			 margin-top: -18px;
+
 
 		}
 
 		.left {
-			left: 0;
-			background: url(images/left.png)
-		}
-
-		.right {
+			width: 24px;
+			height: 36px;
+			position: absolute;
 			right: 0;
-			background: url(images/right.png)
+			top: 50%;
+			margin-top: -18px;
 		}
 
 		.tb ul {
-			width: 70px;
+			width: 65px;
 			height: 13px;
-			background-color: rgba(255,255,255,.3);
+			background-color: rgba(255,255,255,0.3);
 			position: absolute;
-			bottom: 18px;
+			bottom: 10px;
 			left: 50%;
-			margin-left: -35px;
-			border-radius: 4px;
-		}
+			margin-left: -32px;
+			border-radius: 2px;
 
-		.tb ul li {
-			width: 8px;
-			height: 8px;
-			background-color: #fff;
-			float: left;
-			margin: 3px;
-			border-radius: 50%;
 		}
+		
+		.tb li {
+			 width: 9px;
+			 height: 9px;
+			 background-color: #B7B7B7;
+			 margin:2px;
+			 border-radius: 50%;
+			 float: left;
 
-		.tb .current {
-			background-color: #f40;
+		}
+	 	
+		.tb li:hover {
+			background-color: red;
 		}
 	</style>
 </head>
 <body>
 		<div class="tb">
-			<img src="images/tb.jpg"/>
-			 <a href="#" class="left"></a>
-			 <a href="#" class="right"></a>
-			 <ul>
-			 	<li></li>
+			 <img src="images/tb.jpg" />
+			 <a href="#"><img src="images/left.png" class="right" /></a>
+			 <a href="#"><img src="images/right.png" class="left" /></a>
+			 
+			 <ul class="circle">
+			 	<li class="current"></li>
 			 	<li></li>
 			 	<li></li>
 			 	<li></li>

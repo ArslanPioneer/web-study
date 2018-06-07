@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			position: absolute;
+		}
+		.red {
+			z-index: 1;
+			/*只有定位的盒子才有这个层叠优先级属性*/
+			background-color: red;
+			/*position: absolute;*/
+			left: 50px;
+			top: 50px;
+		}
+
+		.blue {
+			 z-index: 1;
+			background-color: blue;
+			left: 100px;
+			top: 100px;
+			
+		}
+
+		 
+	</style>
+
+</head>
+<body>
+		<div class="red"></div>
+		<div class="blue"></div>
+		<div class="green"></div>
+</body>
+</html>
