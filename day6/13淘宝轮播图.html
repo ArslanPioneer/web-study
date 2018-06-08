@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -12,19 +13,20 @@
 		li {
 			list-style: none;
 		}
+
 		.tb {
 			width: 520px;
 			height: 280px;
 			margin: 50px auto;
 			position: relative;
 		}
-		
+
 		.right {
-			 width: 24px;
-			 height: 36px;
-			 position: absolute;
-			 top: 50%;
-			 margin-top: -18px;
+			width: 24px;
+			height: 36px;
+			position: absolute;
+			top: 50%;
+			margin-top: -18px;
 
 
 		}
@@ -41,7 +43,7 @@
 		.tb ul {
 			width: 65px;
 			height: 13px;
-			background-color: rgba(255,255,255,0.3);
+			background-color: rgba(255, 255, 255, 0.3);
 			position: absolute;
 			bottom: 10px;
 			left: 50%;
@@ -49,35 +51,41 @@
 			border-radius: 2px;
 
 		}
-		
+
 		.tb li {
-			 width: 9px;
-			 height: 9px;
-			 background-color: #B7B7B7;
-			 margin:2px;
-			 border-radius: 50%;
-			 float: left;
+			width: 9px;
+			height: 9px;
+			background-color: #B7B7B7;
+			margin: 2px;
+			border-radius: 50%;
+			float: left;
 
 		}
-	 	
+
 		.tb li:hover {
 			background-color: red;
 		}
 	</style>
 </head>
+
 <body>
-		<div class="tb">
-			 <img src="images/tb.jpg" />
-			 <a href="#"><img src="images/left.png" class="right" /></a>
-			 <a href="#"><img src="images/right.png" class="left" /></a>
-			 
-			 <ul class="circle">
-			 	<li class="current"></li>
-			 	<li></li>
-			 	<li></li>
-			 	<li></li>
-			 	<li></li>
-			 </ul>
-		</div>
+	<div class="tb">
+		<img src="images/tb.jpg" />
+		<a href="#">
+			<img src="images/left.png" class="right" />
+		</a>
+		<a href="#">
+			<img src="images/right.png" class="left" />
+		</a>
+
+		<ul class="circle">
+			<li class="current"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
 </body>
+
 </html>
