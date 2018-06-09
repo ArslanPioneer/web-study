@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         * {
+             margin: 0;
+             padding: 0;
+         }
+         li {
+             list-style: none;
+         }
+         li {
+             width: 100px;
+             height: 30px;
+             border: 1px solid pink;
+             /* 1.强制文字一行显示所有文本，直到文本结束或者遭遇br标签对象才换行 */
+             white-space: nowrap;
+              /* 2.超出的部分隐藏 */
+             overflow: hidden;
+             /* 3.溢出的部分用省略号代替 */
+             text-overflow: ellipsis;
+             line-height: 30px;
+
+         }
+    </style>
+    
+</head>
+<body>
+        <li>文字内容文字内容</li>
+        <li>文字内容文字内容</li>
+        <li>文字内容文字内容</li>
+        <li>文字内容文字内容</li>
+        <li>文字内容文字内容</li>
+        <li>文字内容文字内容</li>
+        <li>文字内容文字内容</li>
+</body>
+</html>

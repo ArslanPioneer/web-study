@@ -1,153 +1,287 @@
 /*先删除默认的内外边距*/
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background-color: #fafafa;
-
+  background-color: #fafafa;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
-.clearfix:before, .clearfix:after {
-			content: "";
-			display: table;
-		}
-		.clearfix:after {
-			clear: both;
-		}
-		.clearfix {
-			*zoom: 1;
-		}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
 .header {
-	height: 100px;
-	background-color: #fff;
+  height: 100px;
+  background-color: #fff;
 }
 
 .inner {
-	width: 1200px;
-	height: 100px;
-	background-color: #fff;
-	line-height: 100px;
-	margin: 0 auto;
+  width: 1200px;
+  height: 100px;
+  background-color: #fff;
+  line-height: 100px;
+  margin: 0 auto;
 }
 
 .logo {
-	float: left;
+  float: left;
 }
 
 .nav {
-	float: right;
+  float: right;
 }
 
 .nav ul {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .nav li {
-	float: left;
-	margin: 0 20px;
-	 
+  float: left;
+  margin: 0 20px;
 }
 
 .nav li a {
-	color: #333333;
-	text-decoration: none;
+  color: #333333;
+  text-decoration: none;
 }
 
 .nav li a:hover {
-	color: #2288f6;
+  color: #2288f6;
 }
 
 .banner {
-	height: 620px;
-	background: url(../images/banner.jpg) no-repeat top center;
+  height: 620px;
+  background: url(../images/banner.jpg) no-repeat top center;
 }
 
-.service {
-	width: 1050px;
-	height: 660px;
-	background-color:#fafafa;
-	margin: 75px auto 0;
+.service,
+.case {
+  width: 1050px;
+  /* height: 660px; */
+  background-color: #fafafa;
+  margin: 75px auto 0;
 }
 
 .service-header {
-	border-top: 1px solid #cccccc;
-	margin: 0 25px;
+  border-top: 1px solid #cccccc;
+  margin: 0 25px;
 }
 
 .service-header h3 {
-	width: 167px;
-	height: 46px;
-	margin: -20px auto 0;
+  width: 167px;
+  height: 46px;
+  margin: -20px auto 0;
 }
 
 .service-header p {
-	width: 850px;
-	font-size: 12px;
-	margin: 0 auto;
-	color: #666666;
-	line-height: 26px;
-	text-align: center;
+  width: 850px;
+  font-size: 12px;
+  margin: 0 auto;
+  color: #666666;
+  line-height: 26px;
+  text-align: center;
 }
 .serivice-bd {
-	margin:50px auto 0;
-	border: 1px solid #e7e8e9;
-
+  margin: 50px auto 0;
+  border: 1px solid #e7e8e9;
+  overflow: hidden;
 }
 .service-bd li {
-	height: 510px;
-	width: 315px;
-	background-color: #fff;
-	float: left;
-	border: 1px solid #e7e8e9;
+  height: 510px;
+  width: 315px;
+  background-color: #fff;
+  float: left;
+  border: 1px solid #e7e8e9;
 }
 
-
 .service-bd img {
-	width: 251px;
-	height: 148px;
-	margin: 36px 35px;
+  width: 251px;
+  height: 148px;
+  margin: 36px 35px;
 }
 
 .service-bd h3 {
-	font-size: 18px;
-	color: #333333;
-	text-align: center;
-	font-weight: normal;
+  font-size: 18px;
+  color: #333333;
+  text-align: center;
+  font-weight: normal;
 }
 
 .service-bd p {
-	font-size: 11px;
-	color: #666666;
-	width: 235px;
-	line-height: 30px;
-	margin: 0px auto;
+  font-size: 11px;
+  color: #666666;
+  width: 235px;
+  line-height: 30px;
+  margin: 0px auto;
 }
 
- .service-bd a {
- 	width: 148px;
- 	height: 36px;
- 	display: block;
- 	border: 1px solid #ff9412;
- 	color: #ff9412;
- 	font-size: 12px;
- 	margin: 35px auto;
- 	text-align: center;
- 	text-decoration: none;
- 	line-height: 36px;
- 	border-radius: 2px;
- }
+.service-bd a {
+  width: 148px;
+  height: 36px;
+  display: block;
+  border: 1px solid #ff9412;
+  color: #ff9412;
+  font-size: 12px;
+  margin: 35px auto;
+  text-align: center;
+  text-decoration: none;
+  line-height: 36px;
+  border-radius: 2px;
+}
 
- .service-bd a:hover {
- 	color: #fff;
- 	background-color: #ff9412
- }
+.service-bd a:hover {
+  color: #fff;
+  background-color: #ff9412;
+}
 
- .box2 {
-	margin: 0 45px;
+.box2 {
+  margin: 0 45px;
+}
+/* 经典案例开始 */
+.case {
+  width: 1236px;
+  margin: 105px auto 0;
+}
+.case-bd {
+  width: 1048px;
+  height: 211px;
+  margin-top: 83px;
+  position: relative;
+}
+.case-bd li {
+  width: 325px;
+  height: 211px;
+  /* background-color: pink; */
+  float: left;
+  position: relative;
+}
+
+.case-bd-m {
+  margin: 0px 30px;
+  position: relative;
+}
+
+.case-bd-m p {
+  width: 323px;
+  height: 44px;
+  line-height: 44px;
+}
+
+.text {
+  height: 45px;
+  width: 100%;
+  line-height: 45px;
+  position: absolute;
+  text-align: center;
+  font-size: 11px;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5) url(../images/fdg.png) center no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.case-bd li:hover .mask {
+  display: block;
+}
+
+.left , .right {
+	width: 60px;
+	height: 60px;
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 25px;
+	border-radius: 50%;
+}
+
+.left {
+	left: -90px;
+}
+
+.right {
+	right:-90px;
+}
+.media-bd {
+	width: 1050px;
+	height: 240px;
+	overflow: hidden;
+
+}
+
+.media-bd ul {
+	width: 1060px;
+}
+
+.media-bd li {
+	width: 210px;
+	height: 80px; 
+	float: left;
+	line-height: 80px;
+	text-align: center;
+	border-right: 1px dashed #ccc;
+	border-bottom: 1px dashed #ccc;
+}
+
+.footer {
+	margin: 190px auto 0;
+	height: 170px;
+	background-color: #000;
+	overflow: hidden;
+	line-height: 170px;
+	 
+}
+
+.subnav {
+	 text-align: center;
+	 margin-top: 50px;
+	 color: #f0f1f1;
+}
+
+.subnav a {
+	color: #f0f1f1;
+	text-decoration: none;
+	padding: 0 5px;
+	font-size: 14px;
+}
+
+.subnav a:hover {
+	color: #2288f6;
+}
+
+.footer p {
+	/* margin-top: 30px; */
+	text-align: center;
+	font-size: 11px;
+	color: #888888;
+	 
+	 
+	
+
 }
