@@ -16,11 +16,18 @@ body {
 li {
   list-style: none;
 }
-* {
+
+ul {
   margin: 0;
   padding: 0;
 }
-
+input ,button {
+  padding: 0;
+  border: 0;
+}
+a {
+  text-decoration: none;
+}
 .style-red {
   color: #f10215 !important;
 }
@@ -119,7 +126,7 @@ li {
 }
 
 .header {
-   width: 1903px;
+  height: 140px;
 }
 
 .inner {
@@ -143,3 +150,51 @@ li {
   text-indent: -99999px;
   overflow: hidden;
 }
+.search {
+  width: 685px;
+  height: 40px;
+  position: absolute;
+  left: 400px;
+  top: 30px;
+  /* border: 1px solid #F10215; */
+  background-color: skyblue;
+}
+
+.search input {
+  width: 620px;
+  height: 40px;
+  /* border: 1px solid #f10215; */
+  cursor: pointer;
+  float: left;
+}
+.search em {
+  position: absolute;
+  right:65px;
+  top: 10px;
+  width: 26px;
+  height: 19px;
+  background: url(../images/sprite-search.png) no-repeat;
+  cursor: pointer;
+}
+
+.search em:hover {
+  background: url(../images/sprite-search.png) no-repeat -30px 0;
+  cursor: pointer;
+}
+
+.search button {
+  width: 65px;
+  height: 40px;
+  background-color:#f10215;
+  float: left;
+}
+
+.search button i {
+  font-family: "icomoon";
+  width: 30px;
+  height: 25px;
+  font-style: normal;
+  
+}
+
+
