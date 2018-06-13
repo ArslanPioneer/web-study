@@ -22,32 +22,20 @@ li {
   padding: 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-input ,button {
-  padding: 0;
-  border: 0;
-}
-
-a {
+a{
   text-decoration: none;
 }
 
 img {
   vertical-align: top;
 }
+ 
 
 .style-red {
   color: #f10215 !important;
 }
-h1,h5,p {
-  margin: 0;
-  padding: 0;
-}
 
+ 
 .clearfix:before,.clearfix:after { 
   content:"";
   display: table;  /* 这句话可以出发BFC BFC可以清除浮动,BFC我们后面讲 */
@@ -70,10 +58,7 @@ h1,h5,p {
   font-style: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
+
 /* 京东顶部 start */
 .J_event {
   background-color: #000;
@@ -393,4 +378,78 @@ h1,h5,p {
 
 .service_unit .sheng {
   background-position: 0 -129px;
+}
+
+/* help模块开始 */
+ .mod_help {
+   padding: 20px 0;
+ }
+
+ .mod_help_list {
+   overflow: hidden;
+   height: 160px;
+ }
+
+ .mod_help_nav {
+
+   float: left;
+   width: 198px;
+   line-height: 22px;
+
+ }
+
+ .mod_help_nav h5 {
+   margin-bottom: 5px;
+   font-size: 14px;
+   font-weight: 700;
+ }
+
+.mod_help_nav a{
+  font-size: 12px;
+  color: #666666;
+}
+
+.mod_help_nav a:hover {
+  color: #c81623;
+}
+ 
+.mod_help_cover {
+    width: 200px;
+    height: 150px;
+    float: right;
+    background: url(../images/ico_footer.png) no-repeat;
+}
+.mod_help_cover_con {
+  width: 180px;
+  height: 52px;
+}
+
+.mod_help_cover h5{
+    width: 200px;
+    height: 21px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.mod_help_cover info {
+  /* padding: 0 10px; */
+  width: 180px;
+  height: 52px;
+
+}
+
+.mod_help_cover a {
+  color: #666;
+  float: right;
+  font-size: 14px;
+}
+
+.mod_help_cover i {
+  font-family: "icomoon";
+  font-style: normal;
+  text-align: center;
+  font-size: 14px;
+
 }
