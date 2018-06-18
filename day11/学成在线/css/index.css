@@ -1,0 +1,200 @@
+body {
+    background-color: #f3f5f7;
+}
+
+header {
+    width: 1590px;
+    height: 100px;
+    /* background-color: pink; */
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.logo {
+    width: 195px;
+    height: 42px;
+    /* background-color: purple; */
+    float: left;
+    margin-right: 45px;
+}
+
+.logo a {
+    display: block;
+    width: 195px;
+    height: 42px;
+    background: url(../images/logo.png) no-repeat;
+    /* 隐藏链接中的文字 */
+    text-indent: -999px;
+    overflow: hidden;
+    
+}
+
+.nav {
+    float: left;
+}
+
+.nav li {
+    float: left;
+
+}
+
+.nav li {  
+
+    height: 45px;
+    line-height: 45px;
+    margin-left: 15px;
+
+}
+/* a是行内元素宽高无效，必须将他转换成块级元素 */
+.nav li a {
+
+    display: block;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #424342;
+
+}
+
+.nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+.search {
+    width: 410px;
+    height: 40px;
+    background-color: red;
+    float: left;
+    margin-left: 370px;
+}
+
+.search input {
+    width: 360px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    outline: none;
+    float: left;
+}
+
+.search button {
+    width: 50px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    float: left;
+    background: url(../images/search.jpg) no-repeat;
+}
+
+.personal {
+    width: 280px;
+    height: 42px;
+    float: right;
+    line-height: 42px;
+
+}
+.personal ul li {
+    float: left;
+    margin-right: 30px;
+}
+.personal ul:first-child {
+    font-size: 14px;
+    color: #f3f5f7;
+}
+
+.personal .second {
+    width: 14px;
+    height: 16px;
+
+}
+
+.banner {
+    height: 420px;
+    background-color:  #1c036c;
+    position: relative;
+}
+
+.banner-box {
+    height: 420px;
+    /* background: url(../images/banner.jpg) no-repeat center top; */
+
+
+}
+
+.banner-box img {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.leftnav {
+    width: 190px;
+    height: 420px;
+    /* background-color: pink; */
+    position: absolute;
+    top: 0;
+    left: 360px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.leftnav ul li {
+    padding:20px 0 0 20px;
+    position: relative;
+}
+
+.leftnav a {
+    font-size: 16px;
+    color: #ffffff;  
+  
+}  
+
+
+.leftnav a:hover {
+    color: #00b4ff;
+} 
+
+.leftnav  span {
+    position: absolute;
+    right: 20px;
+
+    
+}
+
+.circle {
+    width: 166px;
+    height: 20px;
+    /* background-color: ; */
+    position: absolute;
+    /* bottom: 0; */
+    left: 50%;
+    /* margin-left: -83px; */
+    transform: translate(-50%);
+    bottom: 30px;
+}
+
+.circle ul li {
+    margin-left:10px;
+    float: left;
+    width: 16px;
+    height: 16px;
+    background-color: rgba(255, 255,255, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.circle ul li:hover {
+    border-radius: 5px;
+    width: 20px;
+    background-color: #ffffff;
+}
+ 
+.schedule {
+    width: 230px;
+    height: 300px;
+    background-color: skyblue;
+    position: absolute;
+    right: 356px;
+    bottom:64px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
