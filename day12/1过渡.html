@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            transition: all 0.3s;
+        }
+        div:hover {
+            background-color:red;
+            /* 顺序有关系先移动后缩放 */
+            transform: translate(100px,0) scale(0.8);
+        }
+    </style>
+</head>
+<body>
+        <div></div>
+</body>
+</html>

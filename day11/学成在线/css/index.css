@@ -191,10 +191,198 @@ header {
 .schedule {
     width: 230px;
     height: 300px;
-    background-color: skyblue;
+    background-color: #ffffff;
     position: absolute;
     right: 356px;
     bottom:64px;
     top: 50%;
     transform: translate(0,-50%);
+}
+
+.schedule dt {
+    width: 228px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #9bceea;
+    color: #ffffff;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.schedule dd {
+    padding: 10px 15px;
+}
+
+.schedule h5 {
+    font-size: 18px;
+    color: #5a5a5a;
+}
+
+.schedule p {
+    color: #ababab;
+    font-size: 12px;
+}
+
+.schedule li {
+    padding-top:10px;
+    border-bottom: 1px solid #efefef;
+    /* display: block;
+    height: 40px;
+    line-height: 40px; */
+}
+
+.schedule li:last-child {
+    border: 0;
+}
+
+.schedule a {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: #00a4ff;
+    width: 196px;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid #00a4ff;
+    margin-top: 10px;
+
+}
+
+.recommend {
+    width: 1200px;
+    height: 60px;
+    background-color: #ffffff;
+    line-height: 60px;
+    position: relative;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.recommend-list {
+    margin-top: 10px;
+     
+}
+
+.recommend-list strong{
+     padding: 30px 20px;
+     font-size: 16px;
+}
+.recommend-list strong:hover {
+    color:#00a4ff ;
+}
+.recommend-list a {
+    padding: 30px 25px;
+    color: #6d6d6d;
+    font-size: 16px;
+}
+
+.recommend em {
+    position: absolute;
+    right:20px;
+    color: #00a4ff;
+}
+.product {
+    width: 1200px;
+    height: 60px;
+    position: relative;
+}
+.product-header {
+    
+    position: relative;
+}
+
+.product-header h5 {
+    display: block;
+    font-size: 20px;
+    margin-top: 38px;
+    margin-bottom: 20px;
+}
+.product-header a {
+    display: block;
+    position: absolute;
+   
+    top: 0;
+    right: 25px;
+}
+
+.product-list {
+
+}
+
+.product-list li {
+    width: 228px;
+    height: 272px;
+    float: left;
+    background-color:#ffffff;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+.product-list li:hover {
+    transform: translate( 0,-10px);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.product-list li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.pic {
+    width: 228px;
+    height: 156px;
+    overflow: hidden;
+
+}
+
+.product-list .title {
+    margin: 25px 20px 20px 25px;
+}
+
+.product-list .info {
+    margin-left: 25px;
+    margin-bottom: 28px;
+    font-size: 12px;
+}
+
+.product-list .info span{
+     color: #ff7c2d;
+}
+
+footer {
+	height: 420px;
+	background-color: #FFF;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+.footer-l {
+	margin-left: 20px;
+	float: left;
+}
+.footer-l p {
+	margin: 25px 0 15px 0;
+	line-height: 24px;
+}
+.footer-l a {
+	width: 120px;
+	height: 35px;
+	display: block;
+	border: 1px solid #22b0ff;
+	text-align: center;
+	line-height: 35px;
+	color: #22b0ff;
+}
+.footer-r {
+	float: right;
+}
+.footer-r dl {
+	float: left;
+	margin-left: 130px;
+}
+.footer-r dl dt {
+	font-size: 14px;
+	color: #333;
+	height: 30px;
+}
+.footer-r dd {
+	height: 20px;
 }
