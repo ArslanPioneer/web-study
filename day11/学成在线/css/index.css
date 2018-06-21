@@ -1,5 +1,6 @@
 body {
     background-color: #f3f5f7;
+    height: 9000px;
 }
 
 header {
@@ -261,7 +262,7 @@ header {
 
 .recommend-list {
     margin-top: 10px;
-     
+    position: relative;
 }
 
 .recommend-list strong{
@@ -286,9 +287,9 @@ header {
     width: 1200px;
     height: 60px;
     position: relative;
+   
 }
 .product-header {
-    
     position: relative;
 }
 
@@ -301,13 +302,12 @@ header {
 .product-header a {
     display: block;
     position: absolute;
-   
     top: 0;
     right: 25px;
 }
 
 .product-list {
-
+      
 }
 
 .product-list li {
