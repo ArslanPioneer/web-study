@@ -50,7 +50,9 @@ body {
  clear:both;
 }
 .clearfix {
-  *zoom:1;
+  content: '';
+  clear: both;
+  display: table;
 }
 
 .w {
