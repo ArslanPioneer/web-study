@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //结论：函数是可以作为返回值使用的
+        function f1() {
+            console.log("f1函数调用了");
+            return function() {
+                console.log("返回的函数");
+            };
+        }
+
+        var ff=f1();//调用
+        ff();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

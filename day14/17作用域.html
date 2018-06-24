@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 全局变量:声明的变量是使用var声明的，那么这个变量就是全局变量，全局变量可以在页面的任何位置使用
+        // 局部变量：在函数内部定义的变量是局部变量
+
+        // 全局作用域
+        // 局部作用域
+        // js没有块级作用域
+        //隐式全局变量：声明的变量没有var
+        function f1(){
+            number=1000;//隐式全局变量
+
+        }
+
+        f1();
+        console.log(number);
+
+        num1=10;
+        var num2=100;
+        delete num1;
+        delete num2;
+
+        // console.log(num1);
+        console.log(num2);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

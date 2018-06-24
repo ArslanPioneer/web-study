@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+       function f1(){
+           console.log("助教");
+       }
+      f1();
+       function f1(){
+           console.log("小杨");
+       }
+       f1();
+
+       var f2=function (){
+           console.log("a");
+       }
+       f2();
+        f2=function (){
+           console.log("b");
+       }
+       f2();
+
+       //函数的自调用，没有名字，声明的同时直接调用
+       (function(){console.log("hh");})();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
