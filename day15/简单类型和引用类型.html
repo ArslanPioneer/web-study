@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //复杂类型引用类型 object
+        //简单类型值类型 number string boolean 堆
+        //空类型:undefined,null  栈
+
+        //值类型传递的值
+        //引用类型传递的是地址
+        var num=10;//值类型，值在栈上
+        var obj={}; //复杂类型对象在堆
+        function f1(x){
+            x=100;
+        }
+        f1(num);
+        console.log(num);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
