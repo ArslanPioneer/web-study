@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        String----->是一个对象
+        实例方法-->必须要通过new的方式创建的对象(实例对象)来调用方法
+        
+        字符串可以看成是字符组成的数组，但是js中没有字符类型
+        可以通过索引读取无法设置
+        设置就是可以改变
+        */
+
+        var str="hello";
+        str="wwww";
+        console.log(str);
+        for(var i=0;i<str.length;i++){
+            console.log(str[i]);
+        }
+        
+        var str="hello wod odd ott fbo nhyo";
+        var index=0;//开始的位置
+        var key="o";//要找的字符串
+        while((index=str.indexOf(key,index))!=-1){
+            console.log(index);
+            index+=key.length;
+        }
+        console.log(index);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
