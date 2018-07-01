@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="请输入搜索内容" name="" id="">
+    <script src="common.js"></script>
+    <script>
+        //注册获取焦点的事件
+        my$("txt").onfocus=function(){
+            if(this.value=="请输入搜索内容")
+                {
+                    this.value="";
+                    this.style.color="red";
+                }
+        };
+        //注册失去焦点
+        my$("txt").onblur=function(){
+            console.log("none");
+        };
+    </script>
+</body>
+</html>

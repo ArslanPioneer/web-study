@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <style>
+         * {
+             margin:0;
+             padding: 0;
+         }
+
+         div {
+             height: 100px;
+             width: 100px;
+             background-color: pink;
+             float: left;
+             margin-left: 15px;
+         }
+     </style>
+</head>
+<body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <script src="common.js"></script>
+        <script>
+            var obj=document.getElementsByTagName("div");
+            for(var i=0;i<obj.length;i++){
+                obj[i].onmouseover=function(){
+                    this.style.border="2px solid red";
+                }
+
+                obj[i].onmouseout=function(){
+                    this.style.border="";
+                }
+            }
+        </script>
+</body>
+</html>

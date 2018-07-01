@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="设置值" name="" id="btn"/>
+     <div id="dv">hhh</div>
+     <script src="common.js"></script>
+     <script>
+         my$("btn").onclick=function(){
+             //设置标签中间的文本内容textContent属性
+             //设置标签中的文本内容应该使用innerText属性谷歌火狐
+                //  my$("dv").textContent="this is div标签";
+                my$("dv").innerText="div";
+         };
+        
+
+         function setInnerText(element,text){
+             //判断浏览器是否支持这个属性
+             if(typeof element.textContent=="undefined"){
+                 element.innerText=text;
+             }
+             else{
+                 //支持这个属性
+                 element.textContent=text;
+             }
+         }
+
+         function getInnerText(element){
+             if(typeof element.textContent=="undefined"){
+                 return element.innerText;
+             }
+             else {
+                 return element.textContent;
+             }
+         }
+
+         //测试
+         my$("btn").onclick=function(){
+             console.log(getInnerText(my$("dv")));
+            //  setInnerText(my$("dv"),"kkk");
+         };
+
+     </script>
+</body>
+</html>

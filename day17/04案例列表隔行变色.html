@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="隔行变色" name="" id="btn" />
+    <ul id="uu">
+        <li>红旗</li>
+        <li>五菱</li>
+        <li>86</li>
+        <li>奥托</li>
+    </ul>
+    <script src="common.js"></script>
+    <script>
+        my$("btn").onclick=function(){
+            var objList=my$("uu").getElementsByTagName("li");
+            for(var i=0;i<objList.length;i++){
+                if(i%2==0){
+                    objList[i].style.backgroundColor="yellow";
+                }
+                else{
+                    objList[i].style.backgroundColor="blue";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
