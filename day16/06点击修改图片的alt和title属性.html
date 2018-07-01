@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" name="" id="btn" value="change">
+    <img src="images/1.jpg" alt="beautiful" title="girl">
+    <script>
+        document.getElementById("btn").onclick=function(){
+          var imgObjs=document.getElementsByTagName("img");
+          imgObjs[0].src="images/2.jpg";
+          imgObjs[0].alt="hh";
+          imgObjs[0].title="realty";
+        };
+    </script>
+</body>
+</html>

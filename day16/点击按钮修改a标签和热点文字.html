@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" name="" id="btn" value="点击修改网址热点文字"/>
+    <a href="http://www.baidu.com" id="a">百度</a>
+    <script>
+        document.getElementById("btn").onclick=function(){
+            var aObj=document.getElementById("a");
+            aObj.href="http://www.sina.com";
+            aObj.innerText="新浪";
+        }
+    </script>
+</body>
+</html>

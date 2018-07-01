@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="button" name="" value="display" id="btn"/>
+        <img src="" alt="" id="im"/>
+        <script>
+            //点击按钮显示图片：点击按钮的时候设置img标签的src属性有一个图片的路径
+            //根据id获取按钮
+            //为按钮注册点击事件添加事件处理函数
+            //根据id获取图片的标签设置图片的src属性值
+            document.getElementById("btn").onclick=function(){
+              var imgDisplay=document.getElementById("im");
+              imgDisplay.src="images/1.jpg";
+              imgDisplay.height="300";
+              imgDisplay.width="400";
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" name="" value="选择"id="btn"/>
+    <select name="" id="ss">
+        <option value="1">jack</option>
+        <option value="2">kik</option>
+        <option value="3">moon</option>
+        <option value="4">hah</option>
+        <option value="5" id="opl">jk</option>
+    </select>
+    <script src="select.js"></script>
+    <script>
+        my$("btn").onclick=function(){
+            //点击按钮选择菜
+            my$("opl").selected=true;
+        };
+    </script>
+
+    <textarea name="" id="tt" cols="30" rows="10">
+        某人问智者，
+        大师：您觉得怎么做才是最快乐的？
+        回答说：不要和愚者辩论
+    </textarea>
+
+    <input type="button" name="" value="注册" id="btn2" />
+    <script>
+         my$("btn2").onclick=function(){
+             my$("tt").innerText="hh";
+         }
+    </script>
+    
+</body>
+</html>

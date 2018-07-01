@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //点击操作：------>事件：就是一件事，有触发和响应
+        //按钮被点击弹出对话框
+        //按钮--->事件源
+        //点击-->事件名字
+        //被点了--->触发了
+        //弹框了--响应
+    </script>
+</head>
+<body>
+   <input type="button" name="click" value="click" id="btn1"/>
+   <script>
+       //根据id 属性的值从整个文档中获取这个元素
+    //    var btnobj=document.getElementById("btn1");
+    //    //为该元素注册点击事件
+    //    btnobj.onclick=function (){
+    //        alert("hello！");
+    //    };
+
+       document.getElementById("btn1").onclick=function(){
+           alert("hhhh");
+       };
+       
+   </script>
+</body>
+</html>
