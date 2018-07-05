@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
-$END$
+        <input type="button" value="移除自定义属性" id="btn" />
+        <div id="dv" score="10"></div>
+        <script src="common.js"></script>
+        <script>
+            //点击按钮移除元素的自定义属性
+            my$("dv").onclick=function () {
+                this.removeAttribute("score");
+            }
+        </script>
 </body>
 </html>

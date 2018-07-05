@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p onclick="window.alert('123')">视频学习群</p>
+    <input type="button" value="点击我" id="btn"/>
+    <script>
+        // document.getElementById("btn").onclick=function(){
+        //     alert("12345");
+        // }
+
+        //事件的三个要素
+        //事件源:p标签
+        //事件名：onclick
+        //行为方法：window.alert('123');
+        var d=document.getElementById("btn")
+        d.onclick=function(){
+            alert(this.innerHTML);
+        };
+        //这种绑定事件的方式只能绑定一个方法
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="cityList">
+        <li>北京</li>
+        <li>上海</li>
+        <li>河南</li>
+        <li>河北</li>
+        <li>云南</li>
+    </ul>
+
+    <script>
+        //13-ul中li标签点击显示内容案例
+        //给所有的li标签绑定点击事件并弹出li标签的内容
+        //第一步：先到所有的li标签
+        // var liNodeList=document.querySelectorAll('#cityList li');
+        // liNodeList.forEach(function(element,index){
+        //     element.onclick=function(){
+        //         alert(this.innerHTML);
+        //     };
+        // });
+        var liNodeList=document.querySelectorAll('#cityList li');
+
+        liNodeList.forEach(function(element,index){
+            element.onclick=liOnClickHander;
+        });
+
+        function liOnClickHander(){
+            alert(this.innerHTML);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid #ccc;
+
+        }
+
+        .parent {
+            height: 200px;
+            width: 200px;
+            padding: 30px;
+            background-color: maroon;
+        }
+        .child{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        父标签
+        <div class="child">
+        子标签
+        </div>
+    </div>
+    <script>
+        //点击子元素标签的时候父元素绑定的点击事件也会被执行
+        //给父亲绑定一个点击事件点击子元素看看是否事件响应方法
+        var parentDiv=document.querySelector(".parent");
+        parentDiv.onclick=function(){
+            alert("父div被点击了");
+        };
+
+        window.onclick=function(){
+            alert('window 点击事件被执行');
+        }
+        var childDiv=document.querySelector(".child");
+        childDiv.onclick=function(){
+            alert("子div被点击");
+        }
+    </script>
+</body>
+</html>

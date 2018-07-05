@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dv" id="d1" title="kk">
+        <span>你好</span>
+        <p>老马的视频学习群是:519628536</p>
+    </div>
+    <script>
+        var d1=document.getElementById("d1");
+        console.log(d1.attributes);
+        d1.setAttribute("title","pop");
+        console.log(d1.getAttribute("class"))
+        console.log(d1.className);
+        console.log(d1.id);
+        d1.removeAttribute("title");
+    </script>
+</body>
+</html>

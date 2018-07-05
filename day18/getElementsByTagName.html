@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <h1>我是老马</h1>
+    <div class="tem">混淆</div>
+
+    <script>
+        //把页面中所有的p标签选择出来
+        //获取 当前文档中的所有p标签
+        var pList=document.getElementsByTagName("p")
+        //此方法返回的HTMLCollection集合对象，一个伪数组
+        //array ->HTMLCollection -Object.protype
+        for(var i=0;i<pList.length;i++){
+            console.log(pList[i].innerHTML);
+        }
+    </script>
+</body>
+</html>

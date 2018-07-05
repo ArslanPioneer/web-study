@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>getElementById案例</title>
+</head>
+<body>
+        <p id="p1">段落1</p>
+        <p id="p2">段落2</p>
+        <p id="p3">段落3</p>
+        <div class="" id="d1"></div>
+       <script>
+           
+        var elementP1=document.getElementById("p1");
+        console.log(elementP1);
+        //elementP1=>HTMLPargraphElement->HTMLElement-> Element -> Node ->EventTarget->Object->null
+        //接口：有自己规定的方法和属性但必须一子类给他实现
+        //类型：可以直接创建实例比如Number类型
+        var d1=document.getElementById("d1");
+        //d1->HTMLDivElement
+        var d2=document.getElementById("ssdddjfsld");
+
+        d1.innerHTML="人生苦短";
+       </script>
+
+</body>
+</html>

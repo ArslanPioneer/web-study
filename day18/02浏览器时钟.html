@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //window.setInterval()
+        //可以传两个参数
+        //1.要执行的代码段
+        //2.要间隔执行代码段的毫秒数
+        //setInterval(function()){
+        //     console.log(1);
+        // },1000);
+
+        // setInterval(function(){
+        //     console.log(new Date());
+        // },1000);
+
+        // setTimeout(func,delay);//延迟delay毫秒之后再执行函数一次
+        // setTimeout(function(){
+        //     console.log("welcome!");
+
+        // },3000);
+            
+        var t=setInterval(function(){
+            console.log(new Date());
+        },1000);
+
+        setTimeout(function(){
+            console.log(t);
+            clearInterval(t);//清除当前的定时器
+        },1000);
+
+    </script>
+</body>
+</html>

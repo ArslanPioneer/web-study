@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+      <div class="num">
+          <span>1</span>
+          <span>1</span>
+          <span>1</span>
+          <span>1</span>
+          <span>1</span>
+      </div>
+
+      <script>
+          var num=document.querySelectorAll(".num span");
+          num.forEach(function(element,index){
+              //所有的span标签元素内嵌设置为
+             element.addEventListener('click',function(){
+                 num.forEach(function(n,index){
+                     n.innerHTML="1";
+                 });
+                 element.innerHTML='0';
+             });
+        
+          });
+      </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     <p>ss1</p>
+     <p class="tm">ss2</p>
+     <p class="tm">ss3</p>
+
+     <script>
+         //把页面中所有的p标签类样式为tm
+         var arr=document.querySelectorAll('p.tm');
+         //arr是一个Nodelist接口的实例
+         console.log(arr);
+        //forEach接受一个函数进行对数处理，函数第一参数是数组的元素第二个参数是元素对应的序列
+         arr.forEach(function(elem,index){
+             console.log(index+":"+elem.innerHTML);
+         });
+     </script>
+</body>
+</html>
