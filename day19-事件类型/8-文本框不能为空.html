@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" name="" id="txt1">
+
+
+        <script>
+            
+             var txt1=document.getElementById("txt1");
+             txt1.onblur=function(){
+                 if(!txt1.value){
+                     txt1.focus();
+                     txt1.style.borderColor="red";
+                 }
+                 else{
+                     txt1.style.borderColor=" ";
+                 }
+             };
+
+        </script>
+</body>
+</html>

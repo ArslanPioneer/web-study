@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .search-box-wrap {
+            margin: 0 auto;
+            width: 300px;
+            height: 400px;
+            position: relative;
+        }
+
+        .search-box-wrap .list{
+            border: 1px solid #ddd;
+            width: 198px;
+            display: none;
+            position: absolute;
+        }
+
+        .txt-search {
+            border-width: 2px;
+            width: 191px;
+            padding-left: 5px;
+            line-height: 20px;
+        }
+        
+        .search-box-wrap .list li {
+            height: 20px;
+            line-height: 25px;
+        }
+
+        .search-box-wrap .list li:hover {
+            background-color:white; 
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-box-wrap">
+
+        <input type="text" id="txtSearch" class="txt-search">
+        <ul class="list" id="tipList">
+            <li>人生</li>
+            <li>天地</li>
+            <li>世界</li>
+        </ul>
+
+        <script>
+            //文本框获得焦点，提示框显示，失去焦点提示框关闭
+            (function(window){
+                    //模拟的块级作用域
+                    window.onload=function(){
+                        var txtSearch=document.getElementById('txtSearch');
+                        var tipList=document.getElementById('tipList');
+                        txtSearch.onfocus=function(){
+                            //
+                            tipList.style.display="block";
+                        }
+                    }
+            })();
+        
+        </script>
+    </div>
+</body>
+</html>

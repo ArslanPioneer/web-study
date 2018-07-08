@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,div,h1 {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .top-wrap {
+            height: 150px;
+            background-color: red;
+        }
+
+        .top-logo-wrap{
+            height: 40px;
+            background-color: skyblue;
+        }
+        .top-search-wrap {
+            height: 110px;
+            background-color: yellow;
+            width: 100%;
+        }
+        .top-search-wrap-fixed {
+            position: fixed;
+            top: 0;
+        }
+        
+    </style>
+
+    <script src="js/documentReady.js"></script>
+
+    <script>
+        document.myReady(function(){
+            var searchBox=document.getElementById('searchBox');
+            window.onscroll=function(){
+                var scrollH=document.documentElement.scrollTop||document.body.scrollTop;
+
+                if(scrollH>=40){
+                    searchBox.className="top-search-wrap top-search-wrap-fixed "
+                }
+                else {
+                    searchBox.className="top-search-wrap";
+                }
+            };
+        });
+    </script>
+</head>
+<body>
+    <div class="top-wrap">
+
+        <div class="top-logo-wrap">
+            可以卷进去的顶部
+        </div>
+        <div id="searchBox" class="top-search-wrap">
+            固定定位
+        </div>
+    </div>
+
+
+    <ul id="list">
+
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+    
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+        
+            
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+    
+    
+
+                       
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+    
+        </ul>    
+        
+</body>
+</html>

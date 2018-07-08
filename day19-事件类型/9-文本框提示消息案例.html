@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="欢迎">
+    <input type="text" value="欢迎" id="txt1">
+
+    <script>
+            window.onload=function(){
+                //文本框获得焦点
+                var txt1=document.getElementById("txt1");
+                
+                txt1.onfocus=function(){
+                    if(txt1.value=="欢迎")
+                    {
+                        txt1.value="";
+                        txt1.style.color="#000";
+                    }
+
+
+                };
+
+                txt1.onblur=function(){
+                    if(txt1.value=="")
+                    {
+                        txt1.value="欢迎";
+                        txt1.style.color="red";
+                    }
+                };
+
+            };
+
+    </script>
+</body>
+</html>
