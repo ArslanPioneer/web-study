@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+      <input type="button" name="" id="btn" value="点击添加标签">
+      <ul class="list">
+        
+      </ul>
+      <script>
+          //实现动态添加li标签的效果
+          //第一步拿到btn按钮
+         var btnAdd=document.querySelector("#btn");
+         var index=1;
+         btnAdd.addEventListener("click",function(){
+             var listAdd=document.querySelector(".list");
+             listAdd.innerHTML+="<li>"+index+"</li>";
+             index++;
+         })
+      </script>
+</body>
+</html>

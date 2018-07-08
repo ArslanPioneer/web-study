@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="点击" id="btn">
+
+    <script>
+    
+        var btn=document.getElementById('btn');
+        //DOM2的绑定事件注册方式
+        if(btn.addEventListener){
+            btn.addEventListener('click',function(){
+                alert('DOM2-1');
+            });
+            btn.addEventListener('click',function(){
+                alert('DOM2-2');
+            });
+
+        }
+
+        else {
+
+            btn.atachEvent("onclick",function(){
+                alert('dom2-1');
+            });
+
+            btn.atachEvent("onclick",function(){
+                alert('dom2-2');
+            });
+
+
+        }
+
+        //dom 1级事件注册
+        btn.onclick=function(){
+            alert("dom 1级");
+        }
+    </script>
+</body>
+</html>

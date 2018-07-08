@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>提醒用户是否离开</title>
+</head>
+<body>
+        <form action="http://www.baidu.com">
+        
+            用户名：<input type="text" id="txtName">
+            <hr>
+            <input type="submit" value="提交" id="submit">
+
+        </form>
+
+        <script>
+        
+            // window.onbeforeunload=function(){
+            //     return '您是否离开?';
+            // };
+
+            var txtName=document.getElementById("txtName");
+            var submit=document.getElementById("submit");
+
+            // submit.onclick=function(e){
+            //     //取消默认操作(在dom0级)可以使用return false
+            //     if(!txtName.value){
+            //             alert("用户名不能为空");
+            //             return false;
+            //     }
+            // };
+
+            if(submit.addEventListener){
+                submit.addEventListener('click',btnSubClickHander,false);
+            }else {
+                submit.attachEvent('onclick',btnSubClickHander);
+            }
+
+            function btnSubClickHander(e){
+                e=e||window.event;
+                if(!txtName.value){
+                    //取消默认操作，取消表单提交
+                    alert('用户名不能为空');
+                    if(e.preventDefault){
+                        //标准浏览器阻止默认行为
+                        e.preventDefault();
+                    }
+                    else {
+                        //ie 8
+                        e.returnValue=false;
+                    }
+                }
+            }
+        </script>
+</body>
+</html>

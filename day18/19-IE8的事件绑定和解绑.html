@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="button" value="点击事件" id="btn">
+        <input type="button" value="解绑事件" id="btnRemove">
+        <script>
+            var btn=document.getElementById("btn");
+            //给IE浏览器注册事件
+            btn.attachEvent('onclick',k);
+            function k(){
+                alert('ok');
+            }
+
+            var btnRemove=document.getElementById('btnDetach');
+            btnRemove.attachEvent('onclick',function(){
+                btn.detachEvent('onclick',k);
+            });
+
+            
+        </script>
+</body>
+</html>
