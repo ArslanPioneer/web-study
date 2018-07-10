@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="a.gif" alt="" id="im">
+    <script>
+
+       /** (function(){
+            window.onload=function(){
+                //给整个文档添加一个onmousemove事件
+                document.onmousemove =function(e){
+                    e = e||window.evnet;
+                    //获取鼠标移动的位置所在整个页面的坐标
+                    //var pagX=e.pageX;//IE9+CHROME FF
+                    var pageX=e.clientX+(document.documentElement.scrollLeft||document.body.scrollLeft)
+                    var pageY=e.clientY+(document.documentElement.scrollTop||document.body.scrollTop)
+                    //给固定定位的图片设置left和top值
+                    var img=document.getElementById('im');
+                    im.style.left=pageX+ 'px';
+                    im.style.top=pageY+ 'px';
+
+                }
+            };
+        })()
+        **/
+       (function(){
+           window.onload=function(){
+               document.onmousemove=function(e){
+                    e= e||window.event;
+                    var pageX=e.pageX;
+                    var pageY=e.pageY;
+
+                    var im=document.getElementById('im');
+                    im.style.left=pageX+'px';
+                    im.style.top=pageY+'px';
+               }
+           }
+       })()
+    </script>
+</body>
+</html>

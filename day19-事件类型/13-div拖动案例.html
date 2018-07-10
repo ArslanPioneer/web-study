@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+            
+        </div>
+
+        <script>
+
+            //监听 div:mousedown,开始计算鼠标移动的位移
+            //通过计算鼠标垂直方式移动的位移来设置div的top值
+            //如果div:mouseup触发了那么计算和移动div就结束
+            //
+            (function(){
+                //移动标志
+                var isMove=false;
+                var box=document.getElementById('box')
+
+                box.onmousedown =function(e){
+                    isMove=true;
+                }
+            })()
+        </script>
+</body>
+</html>

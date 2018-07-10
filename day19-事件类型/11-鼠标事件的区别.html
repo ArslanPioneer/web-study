@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        div {
+            border:1px solid #ddd;
+        }
+        p {
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+        <div id="box" class="box">
+            <p>感谢大家</p>
+            <p>感谢大家</p>
+            <p>感谢大家</p>
+            <p>感谢大家</p>
+        </div>
+
+        <script>
+
+
+            (function(){
+                window.onload=function(){
+                    var box=document.querySelector('.box');
+                    //鼠标按下
+                    box.onmousedown = function() {
+                        console.log('mousedown');
+                    };
+                    //鼠标释放
+                    box.onmouseup =function () {
+                        console.log('mouseup');
+                    };
+                    //如果鼠标不是在当前元素上up的,那么就不会触发click
+                    box.onclick = function(){
+                        console.log('click');
+                    };
+
+                    //离开元素范围后,只执行一次,不会冒泡
+                    box.onmouseleave = function(){
+                        console.log('leave');
+                    };
+                    //首次进入元素范围内触发
+                    box.onmouseenter = function(){
+                        console.log('enter');
+                    };
+                    //元素范围上
+                    box.onmouseover = function(){
+                        console.log('over');
+                    }
+                };
+            })();
+        </script>
+</body>
+</html>

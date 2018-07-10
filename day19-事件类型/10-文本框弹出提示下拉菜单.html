@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
+        html, body, div, ul, li, input {
+            padding: 0;margin: 0;
         }
         li {
             list-style: none;
@@ -40,7 +39,7 @@
         }
 
         .search-box-wrap .list li:hover {
-            background-color:white; 
+            background-color:#ddd; 
             cursor:pointer;
         }
     </style>
@@ -56,18 +55,41 @@
         </ul>
 
         <script>
+            
             //文本框获得焦点，提示框显示，失去焦点提示框关闭
-            (function(window){
-                    //模拟的块级作用域
+            (function(){
+                    //模拟的块级作用域不会影响全局的变量
                     window.onload=function(){
                         var txtSearch=document.getElementById('txtSearch');
                         var tipList=document.getElementById('tipList');
+                        var liList=tipList.getElementsByTagName('li')
                         txtSearch.onfocus=function(){
-                            //
-                            tipList.style.display="block";
+                            //弹出提示框
+                            tipList.style.display=" block";
+                        };
+                        txtSearch.onblur=function(){
+                            //关闭提示框
+                            tipList.style.display=" none";
+                        };
+
+                        //给所有的li绑定事件,实现li点击后把li上的文本放到文本框上去
+                        for(var i=0; i<liList.length;i++){
+                            liList[i].onmousedown=tipLiHander;
+                            //第一步先执行mousedown事件
+                            //原来获得焦点元素会失去焦点
+                            //mousedown 原来获得焦点元素blur事件 当前元素的mouseup事件
+                            // click事件执行
+                            // 如果mouserdown事件中阻止默认行为那么此元素就不会获得焦点
                         }
+                        //所有li标签点击事件的绑定的事件处理程序 减少内存的消耗
+                        function tipLiHander(){
+                            var txt=this.innerHTML; //this === liList[i]
+                            txtSearch.value= txt;   //把li标签的文本设置到文本框上去
+                        }
+                        //所有li标签
                     }
-            })();
+                       
+                })();
         
         </script>
     </div>
