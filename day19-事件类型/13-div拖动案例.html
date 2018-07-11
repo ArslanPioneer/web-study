@@ -13,15 +13,17 @@
         }
 
         .box {
+            
+            position: absolute;
             width: 100px;
             height: 100px;
             background-color: red;
-
+            cursor: move;
         }
     </style>
 </head>
 <body>
-        <div class="box">
+        <div class="box" style="left: 200px;top:150px;" id="box">
             
         </div>
 
@@ -30,16 +32,59 @@
             //监听 div:mousedown,开始计算鼠标移动的位移
             //通过计算鼠标垂直方式移动的位移来设置div的top值
             //如果div:mouseup触发了那么计算和移动div就结束
-            //
+            //mousedown的时候设置标志位true开始移动div mouseup的时候设置标志位为false
+            //停止移动div.mousemove的时候,记录当前的位置和上一次的mousemove的位置做移动距离的计算并
+            //移动div
             (function(){
                 //移动标志
                 var isMove=false;
-                var box=document.getElementById('box')
+                var box=document.getElementById('box');
+
+                //鼠标按下,开始移动div
+                var tempX=0, tempY =0;
+
 
                 box.onmousedown =function(e){
                     isMove=true;
+                    e=e||window.event;
+
+                     tempX = e.clientX +(document.documentElement.scrollLeft||document.body.scrollLeft);
+                     tempY = e.clientY +(document.documentElement.scrollTop||document.body.scrollTop);
+                };
+
+                box.onmouseup =function(e) {
+                    isMove=false;
                 }
-            })()
+
+                //mousemove的时候移动move
+                document.onmousemove =function(e){
+                    if(!isMove){
+                        return;
+                    }
+                    e=e||window.event;
+                    //计算出当前鼠标的位置
+                    //screenX screenY
+                    //最好的使用pageX和pageY 不管是否滚动了页面都不影响
+                    var pageX = e.clientX +(document.documentElement.scrollLeft||document.body.scrollLeft);
+                    var pageY = e.clientY +(document.documentElement.scrollTop||document.body.scrollTop);
+
+                    //移动的距离
+                    var xH=pageX - tempX;
+                    var yH=pageY - tempY;
+
+                    //要把移动的div,在x方向和y方向
+                    //设置元素的style.left style.top
+                    //一开始如果没有通过js设置style.left 和style.top,那么两个值都null
+                    //js是拿不到css设置的style
+                    //js只能控制标签的style属性并且可以读取style属性中的top和left
+                    box.style.left=(parseFloat(box.style.left)+xH)+'px';
+                    box.style.top=(parseFloat(box.style.top)+yH)+'px';
+
+                    //为鼠标下一次mousemove重置
+                    tempX = pageX;
+                    tempY = pageY;
+                };
+            })();
         </script>
 </body>
 </html>

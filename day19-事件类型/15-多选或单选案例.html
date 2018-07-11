@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+        <div class="box" id="box">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+        </div>
+
+        <script>
+
+            (function(){
+                window.onload = function (){
+                    //拿到所有的p标签绑定点击事件
+                    var box =document.getElementById('box');
+                    var pList =box.getElementsByTagName('p');
+
+                    for(var i=0;i<pList.length;i++){
+                        pList[i].onclick =pClickHandler;
+                      
+                    }
+                };
+
+                
+            //段落标签点击的事件处理程序
+            function pClickHandler(e){
+                e = e||window.event;
+                //判断是否按下了键盘的ctrl键
+                if(e.ctrlKey){
+                    //多选
+                    this.style.backgroundColor ='silver';
+
+                }
+
+                else {
+                    //单选
+                    var box =document.getElementById('box');
+                    var pList =box.getElementsByTagName('p');
+                    for(var i=0;i<pList.length;i++){
+                        pList[i].style.backgroundColor = '#fff';
+                    }
+
+                    this.style.backgroundColor = 'silver';
+                }
+            }
+            })();
+
+        </script>
+</body>
+</html>

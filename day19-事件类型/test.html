@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+        <div class="box" style="left:200px;top:150px;" id="box">
+
+        </div>
+
+        <script>
+            (function(){
+                //移动标志
+                var isMove=false;
+                var box=document.getElementById('box');
+
+                //鼠标按下开始移动div
+                var tempX=0 ,tempY=0;
+
+                box.onmousedown =function(e){
+                    isMove=true;
+                    e =e||window.event;
+
+                    tempX=e.clientX +(document.documentElement.scrollLeft||document.body.scrollLeft);
+                    tempY=e.clientY +(document.documentElement.scrollTop||document.body.scrollTop);
+
+
+                };
+                box.onmouseup =function(e){
+                    isMove=false;
+                }
+
+                box.onmousemove =function(e){
+                    if(!isMove){
+                        return ;
+                    }
+
+                    e=e||window.event;
+                    //计算出当前鼠标的位置
+                    var pageX=e.clientX +(document.documentElement.scrollLeft||document.body.scrollLeft);
+                    var pageY=e.clientY +(document.documentElement.scrollTop||document.body.scrollTop);
+
+                    //移动的距离
+                    var xH=pageX -tempX;
+                    var yH=pageY -tempY;
+
+                    box.style.left=(parseFloat(box.style.left)+xH)+'px';
+                    box.style.top=(parseFloat(box.style.top)+yH)+'px';
+
+                    //为鼠标下一次mousemove重置
+                    tempX =pageX;
+                    tempY =pageY;
+
+                }
+            })();
+        </script>
+</body>
+</html>

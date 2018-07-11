@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/documentReady.js"></script>
+</head>
+<body>
+        <input type="text" id="txt">
+
+        <script>
+
+            (function(){
+                document.myReady(function(){
+                    //
+                    var txt=document.getElementById('txt');
+                    //keydown可以应用于所有的dom对象比如p标签、div标签
+                    //可以监听到功能键的按下事件比如ctrl shift alt 方向键 f1 esc
+
+                    txt.onkeydown = function(e) {
+                        e = e || window.event ;
+                        console.log('keyCode:' + e.keyCode + 'charCode:' + e.charCode);
+
+                    }
+
+                    //可以一直触发事件智能监听，可以打印的字符键退格键就不行
+                    //keypress事件是区分按下大小写
+                    txt.keypress =function(e) {
+                        e = e || window.event;
+                        console.log('keyCode:' + e.keyCode + 'charCode:' +e.charCode);
+
+                    }
+
+                    //根据keydown一样不区分大小写按下的
+                });
+            })();
+        </script>
+</body>
+</html>

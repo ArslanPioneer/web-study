@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/documentReady.js"></script>
+</head>
+<body>
+        <div id="box">
+            <input type="text" name="" id="txt1" >
+            <input type="text" name="" id="txt2">
+            <input type="text" name="" id="txt3">
+          
+        </div>
+        <input type="button" value="提交" id="btn">
+
+        <script>
+            (function(){
+                document.myReady(function(){
+                    var box =document.getElementById('box');
+                    var inputList =box.getElementsByTagName('input');
+
+                    for(var i=0;i<inputList.length;i++){
+                        (function(j){
+                            inputList[j].onkeyup =function(e){
+                                if(this.value.length >=3){
+                                    if(j<=1){
+                                        inputList[j+1].focus();
+                                        
+                                    }
+                                    else {
+                                        document.getElementById('btn').focus();
+                                    }
+                                }
+                            }
+                        })(i);
+                    }
+                })
+            })();
+        </script>
+</body>
+</html>

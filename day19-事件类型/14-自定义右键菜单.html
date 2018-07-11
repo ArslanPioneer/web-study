@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        ul {
+            list-style: none;
+        }
+
+        .menu {
+            border: 1px solid #ddd;
+            position: absolute;
+            display: none;
+        }
+
+        .menu .menu-item {
+            border: 1px solid yellow;
+
+        }
+
+        .menu .menu-item:hover {
+            background-color: purple;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+        <h1 id="hTitle">右键点击查看菜单</h1>
+        <ul class="menu" id="menuList">
+            <li class="menu-item">天</li>
+            <li class="menu-item">地</li>
+            <li class="menu-item">人</li>
+            <li class="menu-item">生</li>
+        </ul>
+
+        <script>
+
+            (function(){
+                window.onload =function(){
+                    //给h1标签添加一个右键点击的事件
+                    var hTitle=document.getElementById('hTitle');
+                    var menuList=document.getElementById('menuList');
+                    hTitle.onmousedown=function(e){
+                            e=e ||window.event;
+                            if(e.button ==2||e.button ==6){
+                                //console.log('右键点击');
+
+                                menuList.style.display='block';
+                                //控制弹出来的菜单位置为鼠标的位置
+                                //获取鼠标的位置
+                                var pageX=e.clientX +(document.documentElement.scrollLeft || document.body.scrollLeft);
+                                var pageY=e.clientY +(document.documentElement.scrollTop || document.body.scrollTop);
+                                //设置右键菜单的位置
+                                menuList.style.left=pageX+'px';
+                                menuList.style.top =pageY+'px';
+                            }
+                    }
+                };
+
+                //在整个文件中屏蔽浏览器默认的右键菜单
+                document.oncontextmenu = function(e){
+                    //阻止默认行为就可以阻止浏览器弹出右键菜单
+                    e = e || window.event;
+                    if(e.preventDefault){
+                        e.preventDefault();
+                    }
+                    else {
+                        e.returnValue =false;
+                    }
+
+                    return false;
+                };
+            })();
+        </script>
+</body>
+</html>
