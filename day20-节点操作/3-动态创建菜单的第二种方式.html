@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/documentReady.js"></script>
+    <script src="js/EventUtil.js"></script>
+</head>
+<body>
+    <ul id="menu"></ul>
+
+    <script>
+        (function(){
+              //数据: 假设数据从后台通过ajax获取
+              var data =[
+              {name:'首页',url:'/index.html',id:1},
+              {name:'关于',url:'/about.html',id:2},
+              {name:'产品',url:'/product.html',id:3},
+              {name:'案例',url:'usecase.html',id:4},
+          ];
+            document.myReady(function(){
+                loadMenu();
+            });
+
+            //初始化菜单数据
+
+            function loadMenu(){
+                var menu=document.getElementById('menu')
+                var strArray=[];
+                //使用innerHTML的方式直接拼接字符串
+                //动态创建li标签
+                //{name:'首页',url:'/index.html',id:!}
+                //<li id="menu1"><a href="/index.html">首页</a><li>
+                for(var i=0;i<data.length;i++){
+                    var str = '<li id="menu'+data[i].id+'">';
+                    str +=         '<a href="'+data[i].url+'">'+data[i].name+'</a>';
+                    str += "</li>";
+                    //menu.innerHTML+=str //每创建一个li标签会dom更新一次
+                    strArray.push(str);
+                }
+
+                menu.innerHTML=strArray.join("");//dom只赋值一次
+            }
+
+        })()
+    </script>
+</body>
+</html>
