@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            border: 1px solid #aaa;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        #innerBox {
+            width: 50px;
+            height: 50px;
+            width: 50px;
+            height: 20px;
+            position: absolute;
+            top:5px;
+            right: 5px;
+            background: url(img/close2.png) no-repeat;
+            cursor: pointer;
+        }
+    </style>
+    <script src="js/documentReady.js"></script>
+    <script src="js/EventUtil.js"></script>
+</head>
+<body>
+        <div id="box">
+            <div id="innerBox">
+
+            </div>
+            文本框内容
+        </div>
+
+        <script>
+
+            (function(){
+                document.myReady(function(){
+                    var innerBox=document.getElementById('innerBox');
+                     EventUtil.addEvent(innerBox,'click',function(e){
+                         //操作父节点box
+                         this.parentNode.style.display='none';
+                     });
+                });
+            })();
+        </script>
+</body>
+</html>
