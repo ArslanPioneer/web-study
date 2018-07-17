@@ -157,45 +157,46 @@
           }
         ];
     
-        (function(){
-            document.myReady(function(){
-                //创建省的option
-                initSel();
-        
-            //绑定省的下拉列表事件
-            var province=document.getElementById('province');
-            EventUtil.addEvent(province,'change',function(e){
-                initCity();
+        (function () {
+            document.myReady(function () {
+                //动态创建省的option
+                initProvince();
+
+                //绑定省的下拉列表的改变事件
+                var province=document.getElementById('province');
+                EventUtil.addEvent(province,'change',function(){
+                    initCity();
+                });
+                //页面加载完成后和省事件改变后，初始化城市的选项数据
+                 initCity();
             });
 
-            //页面加载完成和省的数据加载完成后，初始化城市的选项数据
-            initCity();
-        });
-            function initCity(){
+            function initCity() {
                 var cities,
-                    province =document.getElementById('province');
+                    province=document.getElementById('province'),
                     proName=province.value,
                     citySel=document.getElementById('city');
+                for(var j=0;j<data.length;j++){
+                    if(data[j].name==proName){
+                        cities=data[j].cities;
+                    }
+                }
 
-                    //根据省的名字拿到对应城市
-                    for(var j=0;j<data.length;j++){
-                        if(data[j].name==proName){
-                            cities =data[j].cities;//拿到所有的城市集合
-                        }
-                    }
-                    //在插入新的城市之前先清空之前的城市选项
-                    citySel.innerHTML="";
-                    for(var m=0;m<data.length;m++){
-                        var optCity=document.createElement('option');
-                        optCity.value=cities[m];
-                        optCity.text=cities[m];
-                        citySel.add(optCity,null);
-                    }
+                //在插入新的城市之前先清空之前的城市选项
+                citySel.innerHTML="";
+
+                for(var m=0;m<cities.length;m++){
+                    var optCity=document.createElement('option');
+                    optCity.name=cities[m];
+                    optCity.text=cities[m];
+                    citySel.add(optCity,null);
+                }
             }
 
-            function initSel(){
+            //初始化省的选项
+            function initProvince() {
                 var province=document.getElementById('province');
-                for(var i=0;i<data.length;i++){
+                for (var i=0;i<data.length;i++){
                     var opt=document.createElement('option');
                     opt.value=data[i].name;
                     opt.text=data[i].name;
