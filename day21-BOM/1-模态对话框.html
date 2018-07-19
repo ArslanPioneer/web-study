@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .dialog-wrap {
+            display: none;
+        }
+        .dialog {
+            position: absolute;
+            left: 50%;
+            top:50%;
+            margin-top: -151px;
+            margin-left: -151px;
+            border:1px solid #ccc;
+            width: 300px;
+            background-color:#ccc;
+             
+            z-index: 1000;
+        }
+
+        .dialog .dialog-h {
+            border:1px solid #ddd;
+            height: 30px;
+            position: relative;
+        }
+        .dialog .dialog-h .btnClose {
+            position: absolute;
+            cursor: pointer;
+            top:5px;
+            right:5px;
+        }
+
+        .dialog-b {
+            height: 269px;
+        }
+
+        .dialog-cover {
+            /*如果一个div的父容器为body而且是绝对定位那么left和top bottom right会铺满整个屏幕*/
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom:0;
+            z-index: 100;
+            background-color: red;
+            filter:alpha(opacity=50);
+            opacity:0.3;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="弹出对话框" id="btn">
+    <div class="dialog-wrap" id="dialogBox">
+        <div class="dialog-cover"></div>
+        <div class="dialog" id="dialog">
+            <div class="dialog-h">
+                <h3>对话框的头部</h3>
+                <i class="btnClose" id="btnClose">X</i>
+            </div>
+    
+            <div class="dialog-b">
+                <p>对话框的内部</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+
+        window.onload =function(){
+                var btn=document.getElementById('btn');
+                btn.onclick=function(){
+                    var dialog=document.getElementById('dialogBox');
+                    dialog.style.display="block";
+                }
+
+                var btnClose=document.getElementById('btnClose');
+                btnClose.onclick =function(){
+                    //关闭界面
+                    this.parentNode.parentNode.style.display="none";
+                }
+                
+        }
+    </script>
+</body>
+</html>
