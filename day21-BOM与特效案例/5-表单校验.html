@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form" action="#" >
+        <table>
+                <tr>
+                    <td>姓名:</td>
+                    <td><input type="text" name="txtName" id="txtName" placeholder="文本不少于6个字符"></td>
+                </tr>
+                <tr>
+                    <td>邮箱:</td>
+                    <td><input type="text" name="txtEmail" id="txtEmail"></td>
+                </tr>
+                <tr>
+                    <td>电话:</td>
+                    <td><input type="text" name="txtTel" id="txtTel"></td>
+                </tr>
+                 
+                <tr>
+                    <td colspan="2"></td>
+                    <td>
+                        <input type="submit" value="提交">
+                        <input type="reset" value="重置">
+                    </td>
+                </tr>
+        </table>
+    </form>
+
+    <script>
+         window.onload=function(){
+             var form=document.getElementById('form');
+
+             var txtNameMessage=document.createElement('span');
+             txtNameMessage.innerHTML="文本字符在6-20之间";
+             txtNameMessage.style.color="red";
+
+            //表达提交的时候限制此事件响应方法
+             form.onsubmit=function(e){
+                var txtName=document.getElementById('txtName');
+                
+                var txtReg=/\w{6,20}/gi;
+
+                if(txtReg.test(txtName.value)){
+                    //移除文本框错误信息  白色变量名
+                    txtName.parentNode.removeChild(txtNameMessage);
+
+                }
+
+                else {
+
+                    //校验失败添加错误信
+                    txtName.parentNode.appendChild(txtNameMessage);
+                    return false;
+                }
+             }  
+
+              
+         }
+    </script>
+</body>
+</html>

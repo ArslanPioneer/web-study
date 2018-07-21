@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,ol {
+            list-style: none;
+        }
+
+        .ac {
+            border:1px solid #ccc;
+            width: 300px;
+            margin: 100px auto;
+        }
+
+        .ac .ac-item .ac-item-hd {
+            height: 30px;
+            line-height: 30px;
+            background-color: #efefef;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            
+        }
+        
+        .ac .ac-item .ac-item-bd {
+            height: 150px;
+            display: none;
+        }
+
+        .ac .ac-item.on .ac-item-bd {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+        <ul class="ac">
+
+             <li class="ac-item on">
+                 <div class="ac-item-hd">a1</div>
+                 <div class="ac-item-bd">a2</div>
+             </li>
+
+             <li class="ac-item">
+                 <div class="ac-item-hd">b1</div>
+                 <div class="ac-item-bd">b2</div>
+             </li>
+
+             <li class="ac-item">
+                 <div class="ac-item-hd">c1</div>
+                 <div class="ac-item-bd">c2</div>
+             </li>
+
+             <li class="ac-item">
+                 <div class="ac-item-hd">d1</div>
+                 <div class="ac-item-bd">d2</div>
+             </li>
+
+        </ul>
+
+        <script>
+            window.onload=function(){
+                var liArray=document.querySelectorAll('.ac-item');
+                for(var i=0;i<liArray.length;i++){
+                    liArray[i].onclick=function(e){
+                        for(var j=0;j<liArray.length;j++){
+                            liArray[j].className="ac-item";
+                        }
+                        //li被点击后自己要添加on样式类，所有的兄弟li要去掉on样式类
+                        this.className="ac-item on";
+                    }
+                }
+            };
+            
+        </script>
+</body>
+</html>
