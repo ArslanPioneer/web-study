@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <table>
+         <tr>
+             <td>用户</td>
+             <td>年龄</td>
+             <td>事件</td>
+         </tr>
+         <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+         </tr>
+         <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+         </tr>
+         <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+         </tr>
+    </table>
+
+    <script>
+         $(function(){
+             //jquery可以通过原型上的click方法进行绑定点击事件
+             //$('tr')
+            $('tr').click(function(e){
+                //点击了当前行，那么让当前行背景高亮让其他的兄弟节点背景不高亮
+                //jquery的事件处理程序在,this依然指向绑定事件dom对象
+                $(this).css('backgroundColor','#ccc');
+                //拿到多个兄弟节点，隐式迭代全部设置背景为白色
+                $(this).siblings().css('backgroundColor','#fff');
+            })
+         });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+</head>
+<body>
+        <input type="button" value="按钮" id="btn">
+        <input type="button" value="click" id="btn2">
+
+        <script>
+            //jquery高级绑定事件的方式
+            $('#btn').bind('click',function(e){
+                console.log(this.value,e);
+            });
+
+            //jquery的blind方法 传递三个参数
+            //第一个参数：事件类型 string
+            //第二个参数 ：给事件处理程序的data属性传递数据
+            //第三个参数 事件处理程序的回调函数
+            //jquery的blind方法传递三个参数
+            //第一种绑定事件的方式 推荐使用
+            $('#btn').bind('click','2222',function(e){
+                console.log(e.data);
+            });
+            //bind方法可以对同一个事件多次绑定
+            $('#btn').bind('focus','3333',function(e){
+                console.log(e.data);
+            });
+
+            //同时绑定多个事件
+            $('#btn2').bind('focus click',function(e){
+                console.log(e.type);
+            });
+
+
+            $('#btn2').bind(
+                {
+                    click: function(e){
+                        console.log('abc');
+                    },
+
+                    mousedown: function(e){
+                        console.log('123');
+                    }
+
+                }
+            )
+        </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        table {
+            border-collapse:collapse;
+            border-spacing: 0;
+            border:1px solid #ccc;
+            width: 400px;
+        }
+
+        td {
+            border:1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table>
+         <tr>
+             <td>用户名</td>
+             <td>年龄</td>
+             <td>编号</td>
+         </tr>
+
+         <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+         </tr>
+
+         <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+         </tr>
+
+         
+         <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+        </tr>
+
+
+        
+        <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+        </tr>
+    </table>
+
+    <script>
+        $(function(){
+            //获得奇数行的tr 标签
+           var oddTrs= $('tr:odd');
+           console.dir(oddTrs);
+           //dom原始的写法，很麻烦需要进行遍历
+           //or(var i=0;i<oddTrs.length;i++){
+             //  var domTr=oddTrs[i];
+            //   domTr.style.backgroundColor="#eee";
+           // }
+
+            //jquery提供隐式迭代的方法
+            //jquery设置dom元素的样式提供了方法css('styleName','value')
+            //如果传一个参数代表获取，传两个参数代表设置
+            oddTrs.css('backgroundColor','#aaa');
+
+            var evenTrs=$('tr:even');
+            evenTrs.css('backgroundColor','red');
+        });
+    </script>
+</body>
+</html>

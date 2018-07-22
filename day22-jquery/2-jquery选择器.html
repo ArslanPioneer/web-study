@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery选择器</title>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+
+    <script>
+
+        $(function(){
+            //页面的文档加载完成后
+            var $btn=$('#btn');
+            //#代表id选择器
+           //jquery的构造函数
+           //1.可以接受一个回调函数回调就是页面加载完成后执行
+           //2.可以接受一个css的选择器，返回选择器对应dom节点的jquery包装对象
+
+            console.dir($btn);
+            //jquery包装对象 （所有的选择器返回的对象都是jquery的包装对象
+            //jquery包装对象 和dom对象相互转化
+
+            var btn=$btn[0];//jquery ->DOM
+
+            //DOM 对象转化 jquery
+            var $btn2=($btn);
+            //jquery构造函数的第三种用法:接受一个dom对象 转成jquery的包装对象
+            console.dir($btn2);
+        });
+    </script>
+</body>
+</html>

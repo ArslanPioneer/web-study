@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <input type="button" id="btn" value="123">
+
+    <script>
+        
+        window.onload=function(){
+            console.log('ready3');
+        }
+
+        //推荐使用这种
+         $(function(){
+            //页面加载完成后自动执行
+            console.log('ready1');
+         });//$是一个函数对象 jquery构造函数
+
+         //文档加载完成后自动执行回调函数
+         $(document).ready(function(){
+            console.log('ready2');
+         });
+    </script>
+</body>
+</html>
