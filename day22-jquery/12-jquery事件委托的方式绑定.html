@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/lib/jquery-2.2.4.js"></script>
+</head>
+<body>
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <script>
+        $(function(){
+            $('.list').delegate('li','click',function(e){
+                //dom
+                console.log(this.innerHTML);//innerText(ie)
+                console.log($(this).text());
+            });
+
+            //jquery:click(简单绑定事件) bind one 
+            //one:事件只执行一次
+            //live 对动态创建的dom元素绑定事件
+            //delegate 事件委托绑定事件
+
+        });
+    </script>
+</body>
+</html>

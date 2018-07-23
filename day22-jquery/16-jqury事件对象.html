@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <p>1234</p>
+    <input type="text" name="" id="">
+    <script>
+        
+        $('p').on(function(e){
+            console.log(e);
+            console.log(e.which);
+        });
+
+        $('input:text').on('keydown',function(e){
+            console.log('e.which');
+        });
+
+        //绑定一给自定义事件
+        $('input:text').on('myevent',function(e){
+            console.log('我的自定义事件');
+            console.log(this.value);
+        });
+
+        //触发自定义事件
+        $('input:text').trigger('myevent');
+    </script>
+</body>
+</html>

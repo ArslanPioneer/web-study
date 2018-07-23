@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>on绑定事件的方式</title>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+</head>
+<body>
+        <input type="button" value="按钮" id="btn">
+        <ul class="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <!-- <script>
+            $(function(){
+                //on 代替bind绑定事件的方式
+                $('#btn').on('click',function(e){
+                    console.log(123);
+                });
+
+                //on替代live动态创建元素绑定事件的方法
+                //dom动态创建
+                //var domP=document.createElement('p');
+                 //   domP.innerHTML="1234";
+               // $(domP).on('click',function(e){
+               //     console.log($(this).text());
+               // })
+
+               // document.body.appendChild(domP);
+                //jquery动态创建dom标签
+                var $p=$('<p>12345667</p>');
+                $p.on('click',function(e){
+                    console.log($(this).text());
+                });
+                //给页面中的body添加$p标签
+                $('body').append($p);
+                //jquery构造函数的用法复习
+                //1.接受一个回调函数，作为document ready事件
+                //2.可以接受一个字符串作为选择器进行选择页面中元素 返回jquery包装对象
+
+                //3.可以接受一个dom对象将dom对象转化jquery包装对象
+                //4.可以接受一个html标签字符串，创建成jquery包装对象
+
+                //on 替代delegate方法
+                $('.list').on('click','li',function(e){
+                    console.log($(this).html());
+                });
+            });
+        </script> -->
+
+        <script>
+            //代替blind
+             $('#btn').on('click',function(e){
+                 console.log('1233');
+             });
+
+             //代替live 动态创建元素
+             var domP=document.createElement('p');
+             domP.innerHTML="what";
+             $(domP).on('click',function(e){
+                 console.log($(this).text());
+             });
+             document.body.appendChild(domP);
+
+             //on代替delegate方法
+             $('.list').on('click','li',function(e){
+                console.log($(this).html());
+             });
+        </script>
+</body>
+</html>
