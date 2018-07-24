@@ -8,7 +8,7 @@
     <script src="js/lib/jquery-1.12.4.js"></script>
 </head>
 <body>
-    <table>
+    <table class="list">
         <thead>
             <th>用户名</th>
             <th>邮箱</th>
@@ -67,11 +67,16 @@
                     tempStrArray.push(tempStr);
                 }
 
-                //设置元素的内部的标签字符串 
+                //设置元素的内部的标签字符串 第二种用法
                 $('.list tbody').html(tempStrArray.join(''));
 
-                //读取标签内部的html字符串
+                //读取标签内部的html字符串 不传参数就是读取
                 console.log($('.list tbody').html());
+
+                //第三种用法
+                $('.list tbody').html(function(index,oltext){
+
+                });
             })
     </script>
 </body>

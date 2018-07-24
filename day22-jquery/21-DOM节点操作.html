@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+</head>
+<body>
+     <div id="msg">hi</div>
+
+     <script>
+
+        $(function(){
+            //添加字符串
+            $('#msg').append('<span>你好</span>');
+
+            //添加dom对象
+            var domDiv=document.createElement('div');
+            domDiv.innerHTML="hi laoma q:122112233";
+            $('#msg').append(domDiv);
+
+            //添加jquery对象
+            var $span=$('<span>我是jqury对象</span>');
+            $('#msg').append($span);
+
+            $("#msg").append(function(index,oldHtml){
+                return "<span>=="+index+"==</span>";
+            });
+        });
+     </script>
+</body>
+</html>
