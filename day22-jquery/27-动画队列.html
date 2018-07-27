@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid #ccc;
+            background-color: red;
+        }
+    </style>
+
+    <script src="js/lib/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <input type="button" value="动画" id="btn">
+    <input type="button" value="立即结束动画" id="btnFinish">
+    <input type="button" value="停止动画" id="btnStop"> 
+    <div class="box">
+
+    </div>
+
+    <script>
+
+        $(function(){
+            $('#btn').on('click',function(e){
+                $('.box').hide(1000).show(1000).slideUp(1000).slideDown(1000);
+            });
+           
+
+            $('#btnFinsh').on('click',function(e){
+                //立即结束动画让dom元素变化到最终动画队列都结束的效果
+                $('.box').finish();
+            });
+
+
+            $('#btnStop').on('click',function(e){
+                //stop方法传入一个参数：false或者不传参数表示结束当前的动画，后续的动画不受影响
+
+                //让dom元素达到最后效果
+                $('.box').stop(true,true);
+            })
+            
+        })
+    </script>
+</body>
+</html>

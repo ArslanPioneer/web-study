@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <div class="box">
+        sss
+    </div>
+
+    <script>
+        $(function(){
+            $('.box').text('3333').slideUp(1000).slideDown(1000);
+        });
+
+        //链式编程的原理：对象调用了方法后，方法返回当前对象
+        var Cat= {
+            run:function(){
+                console.log('running');
+                //核心：方法内部
+                return this;
+            },
+
+            say: function(){
+                console.log('hi');
+            }
+        };
+
+        Cat.run().sayHi().jump();
+
+    </script>
+
+   
+</body>
+</html>

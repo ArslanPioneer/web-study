@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+    <script>
+
+        //dom对象转换jquery包装对象
+        //动态创建dom对象
+        //1.选择元素
+        //2.dom对象转化成jquery包装对象
+        //3.动态创建dom标签的jquery包装对象
+
+        //each方法
+        //js ec5中的map方法 对数组中的元素进行处理并返回数组
+        
+        //jquery 构造函数的extend方法
+        var target={name:'hh'};
+        var obj1={age:12,cellphone:'12233324',mail:'hhh'};
+
+        var newObj=jQuery.extend(target,obj1);
+        console.log(target,newObj);
+        console.log(newObj===target);
+    </script>
+</body>
+</html>
