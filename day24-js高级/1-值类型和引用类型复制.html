@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>值类型和引用类型复制</title>
+</head>
+<body>
+        <script>
+            var a=9,b;
+            var c={age:9},d;
+
+            //把a值类型赋值给了b
+            b=a;
+            b=19;
+            console.log(a); //a=9
+            console.log(b); //b=19
+
+            //如果是引用类型的赋值后操作
+            //引用类型的赋值操作：是将 引用类型的堆上的内存地址进行了复制
+            d=c;    //把c引用类型赋值给了d
+            d.age=12; //修改了d变量的age属性为22
+
+            console.log(c.age);
+            console.log(d.age)
+        </script>
+</body>
+</html>
