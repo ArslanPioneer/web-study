@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数参数的值传递和引用传递</title>
+</head>
+<body>
+    
+    <script>
+        var  a=9; //简单类型
+            b= {name:'kik',age:18}; //引用类型
+        
+        //把a和 b分别传 给c1和c2
+        //函数的参数：  如果是简单类型会做一个值类型的数组副本传到函数内部
+        //如果是一个参数是引用类型，会讲引用类型的地址值复制到传入函数的参数
+        function demo(c1,c2) {
+            c1=29;  //对 c1做了更改 
+            c2.name="666";  //更改了c2引用类型的顺序name
+        }
+
+        //调用 函数执行
+        demo(a,b);
+
+        console.log(a);    
+        console.log(b);  
+    </script>
+</body>
+</html>

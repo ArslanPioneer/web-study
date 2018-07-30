@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>构造器函数调用模式</title>
+</head>
+<body>
+    
+    <script>
+        //构造器调用模式 构造函数 
+        //关键字new 
+
+        function Cat() {
+            //第一步创建一个空对象
+            //第二步 给函数上下文赋值 新对象 this=新对象
+
+            this.age=19;
+            this.name='cat';
+            this.run=function() {
+                console.log(this.name+'run ...');
+            }
+
+            //如果构造函数没有返回值，那么就返回this新对象
+            return 3;
+        }
+
+        var cat=new Cat();//构造函数调用模式
+
+        cat.age=20;
+        cat.name='2222';
+        cat.run();//方法调用模式
+    </script>
+</body>
+</html>

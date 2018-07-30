@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //代码执行之前的时候,就会立即创建一个全局的执行上下文
+        //Global Excution Context
+        //创建完全局执行栈立即压入栈中
+        function f1(){
+            console.log('f1');
+        }
+
+        function  f2(){
+            console.log('f2');
+            f3();
+        }
+
+        function f3(){
+            console.log('f3');
+            f4();
+
+        }
+
+        function f4(){
+            console.log('f4');
+        }
+        
+        f1();
+        f2();
+        //f2()函数之前，创建f2的执行上下 文 。压栈到执行环境栈中ecs
+    </script>
+</body>
+</html>

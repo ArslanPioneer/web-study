@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>方法调用模式</title>
+</head>
+<body>
+    
+    <script>
+        //定义构造函数
+        //定义一个dog类的构造函数
+        function Dog(dogName) {
+            //如果函数当作构造函数来用
+            //第一步 创建一个空对象 函数上下文===this
+            //第二步:把空对象赋值给函数的上下文 this=新对象
+            this.name=dogName;
+            this.age=0;
+
+            this.run=function () {
+                console.log(this.name+'is running...');
+            };
+
+            //并没有返回任何数据 默认就返回新对象
+        }
+
+        //使用构造函数创建一个dog类型的实例
+        var d=new Dog('lddd');
+
+        d.run(); //调用d对象实例的run方法
+        //这就是对象的方法调用模式
+
+
+        function fish(fishName) {
+            this.name=fishName;
+            this.age=0;
+
+            this.summer=function () {
+                console.log(this.name+'is fishing...');
+            };
+        }
+
+        var f=new fish('kk');
+        f.summer();
+    </script>
+</body>
+</html>

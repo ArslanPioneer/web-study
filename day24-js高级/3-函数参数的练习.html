@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数参数</title>
+</head>
+<body>
+    
+    <script>
+        function max(a,b) {
+            
+            console.log(arguments);  //每个函数内 部都 可以直接访问 arguments里面就是存放着 我们传 递给函数 的 参数 
+            //arguments  不是一个数组，它的属性：0，1，2.。
+            //arguments有一个length属性 属性值 就是传递实参数的 个数
+
+            for(var i=0;i<arguments.length;i++) {
+                console.log(arguments[i]);
+            }
+
+            if(a>b) {
+                return a;
+            }
+            else {
+                return b;
+            }
+
+        }
+
+        //var t=max(9,10);
+       // console.log(t);
+
+        var m=max(9,10,20,30);
+        //要你实现max方法 可以 接受任意 多给个参数
+        
+        function myMax(){
+            //如果调用函数 的地方没有传递 参数那么 直接返回Nan
+            if(arguments.length<=0){
+                return NaN;//return语句执行，当前函数立即结束
+            }
+            var  max=arguments[0]
+            //获取实参：  使用arguments
+            for(var i=0;i<arguments.length;i++){
+                if(arguments[i]>max){
+                    max=arguments[i];
+                }
+            }
+
+            return max;
+        }
+        var max=myMax(2,432,2);
+        console.log(max);
+    </script>
+</body>
+</html>

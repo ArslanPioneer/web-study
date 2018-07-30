@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            //案例4：
+            f();
+            console.log(b);
+            console.log(c);
+            console.log(a);
+
+            function f(){
+                var a= b= c=9;  //a是局部变量 b\c是全局变量
+                //var a=9,b=9,c=9; 三个局部变量
+                console.log(a); //9
+                console.log(b); //9
+                console.log(c); //9
+            }
+
+            //案例5
+            f();
+            function f() {
+                for(var k=0;k<10;k++){
+                    console.log(k); //0-9
+                }
+
+                console.log(k);//10 js没有块级作用域
+            }
+        </script>
+</body>
+</html>

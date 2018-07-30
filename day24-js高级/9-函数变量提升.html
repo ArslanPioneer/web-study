@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var  a=10; //全局变量 全局都可以访问
+        function f1(){
+            //函数的变量提升：因为在函数执行之前创建函数的 ec
+            //在创建ec的时候已经把函数声明的变量都已经初始化成了undefined
+            console.log(a); //a = undefined
+  
+             var a=19;  //给局部变量a赋值19
+
+            console.log(a); //a -19
+            //特殊情况：变量 声明和函数 声明 同名时函数优先级高
+            console.log(b);
+
+            var b=9;
+            function b() {
+
+            }
+
+            console.log(b);
+        }
+
+        f1();
+        console.log(a); //a- 10
+
+        
+ 
+    </script>
+</body>
+</html>
