@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>call和apply调用模式</title>
+</head>
+
+<body>
+
+    <script>
+        //call和apply调用模式
+        function sum(a, b) {
+            console.log(this);
+            return a + b;
+        }
+
+        // sum(1,2);
+
+        //  var t= {
+        //    name: 'hh'
+        // };
+
+        // var m=sum.call(t,2,3,8,10);
+        //console.log(m);
+
+        //var m2=sum.apply(t,[1,2]);
+        //console.log(m2);
+
+        //如果你传递的第一个参数是简单类型(值类型和原始类型) 
+        //如果传递第一个参数是:null undefined =>window
+        //如果是number string boolean 转成对应的包装类型
+        sum.call(null, 3, 5);
+        sum.call(undefined, 3, 5);
+        sum.call(3, 3, 5);
+
+        //3.把类数组转换成真正的数组
+        var t={};
+        t[0]=1;
+        t[1]=true;
+        t[2]='jack';
+        t.length=3;
+
+        var m=[1,2,3];
+        t.slice();
+        //如果什么都不传默认是从索引0开始截取到数组最后
+        //第一个参数 startIndex
+        //第二个参数 截取结束的位置加1 endIndex
+
+        //
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var f=function(){
+            console.log('sss');
+        };
+
+        f(); //调用函数表达式执行
+
+
+        //函数命名表达式 fun相当于在函数内部添加变量fun 
+        var m=function fun() {
+            console.log('fun');
+        };
+
+        m();
+
+        var n=function(){
+            console.log('num');
+        }
+
+        n();
+
+
+        //求num的阶乘用递归实现
+        function factorial(num) {
+            //定义一个出口
+            if(num == 1) {
+                return 1;
+            }
+
+            return num*factorial(num-1);
+        }
+
+        console.log(2);
+        //求fn 的斐波那契数列的值
+        function fibonacci(n) {
+            if(n==1) {
+                return 1;
+            }
+
+            if(n==0) {
+                return 0;
+            }
+            return fibonacci(n-1) +fibonacci(n-2);
+        }
+
+        console.log(fibonacci(5));
+    </script>
+</body>
+</html>

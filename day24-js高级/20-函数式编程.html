@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          //复习 array.prototype.sort 可以对数组中的元素进行排序
+          var t=[48,23,41,23,211,2112,12];
+
+          console.log(t);
+          console.log(t.sort());
+
+          //按照数值的大小进行排序
+          t.sort(function(a,b) {
+              //如果a>b return 大于0的值
+              //a===b return 0
+              
+              return a-b;
+          });
+
+          console.log(t);
+    </script>
+  
+
+</body>
+</html>

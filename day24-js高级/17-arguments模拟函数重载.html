@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arguments模拟函数重载</title>
+</head>
+<body>
+    
+    <script>
+
+        function React(){
+            //如果两个参数返回一个正方形
+            if(arguments.length==1){
+                this.width=arguments[0];
+                this.height=arguments[0];
+            }
+
+            //如果两个参数返回一个矩形
+            if(arguments.length >1) {
+                this.width=arguments[0];
+                this.height=arguments[1];
+            }
+
+            this.tostring=function(){
+                return 'width:'+this.width+''+'height:'+this.height;
+            }
+        }
+
+        var r1=new React(10);
+        console.log(r1.tostring());
+
+        var r2=new React(15,10);
+        console.log(r2.tostring());
+        
+    </script>
+</body>
+</html>
