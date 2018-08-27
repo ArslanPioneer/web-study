@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>汽车之家</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-wrap {
+            display: flex;
+        }
+
+        .top-wrap .top-l ,.top-wrap .top-r {
+            flex:0 0 60px;
+            border:1px solid #ccc;
+            height: 30px;
+            line-height: 30px;
+            box-sizing: border-box;
+        }
+        
+        .top-wrap .top-m {
+            flex: 1;
+            height: 30px;
+
+        }
+
+        .top-wrap .top-m input {
+            height: 28px;
+            line-height: 28px;
+            border:1px solid #ccc;
+            border-radius:15px;
+            width:90%;
+        }
+
+
+    </style>
+</head>
+<body>
+        <div class="top-wrap">
+            <div class="top-l">汽车</div>
+            <div class="top-m"><input type="text" class="search-text"></div>
+            <div class="top-r">用户</div>
+        </div>
+</body>
+</html>

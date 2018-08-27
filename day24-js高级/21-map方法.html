@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <script>
+        'use strict';
+        var m = new Map();
+        var s = new Set();
+        console.log('你的浏览器支持Map和Set！');
 
-        //map方法
-        var t=[1,3,9,10,20];
+        //Map 是一组键值对的结构 具有极快的查找速度
+        var m=new Map([['mike',15],['Bob',75],['tracy',85]]);
 
-        //for(var i in t) {
-          //  console.log(t[i]);
-       // }
+        m.get('mike');
+        console.log(m.get('mike'));
 
-        //对数组每个元素都进行2，打印结果数组
-        //结果数组,返回一个新数组，每个项处理完成后的结果组成的新数组
-        //对原数组没有影响
-        var m=t.map(function(item,index,array){
-            //item :当前选项
-            //index 当前选项的索引
-            //array 当前数组
-            //return 返回每个项处理的结果
-            return item*2;
-        });
+        var m=new Map();
+        m.set('adam',67);//添加新的key-value
+        m.set('Bob',59);
 
-        console.log(t);
-        console.log(m);
+        m.has('adam'); //是否存在key 'adam':true
+        m.get('adam'); //67
+
+        m.delete('Adam'); //删除key 'Adam'
+        m.get('Adam'); //undefined
+
+        //set 一组key的集合但不存储value 由于key不能重复所以在set中没有重复的key
+
+        var s1=new Set();
+        var s2=new Set([1,2,3]);
+        
+
+
+
+
     </script>
 </body>
+
 </html>

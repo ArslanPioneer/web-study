@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹性盒子</title>
+    <style>
+        * {
+            padding:0;
+            margin: 0;
+        }
+
+        .wrap {
+            width:960px;
+            margin: 5px auto;
+            border:1px solid #ccc;
+            color:#c0c0c0;
+        }
+
+        .hd {
+            height: 30px;
+            background-color: red;
+            opacity: .8;
+            line-height: 30px;
+        }
+
+        .wrap .bd {
+            display: flex;
+             
+        }
+
+        .wrap .bd .child {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid maroon;
+            color:green;
+        }
+        
+        .row-reverse {
+            flex-direction: row-reverse
+        }
+
+        .column {
+            flex-direction: column
+        }
+
+        .column-reverse {
+            flex-direction: column-reverse
+        }
+
+        .flex-wrap {
+            /*换行*/
+            flex-wrap:wrap;
+        }
+
+        .flex-nowrap {
+            flex-wrap:nowrap;
+        }
+
+        .justify-content-flexstart {
+            /*默认靠左对齐*/
+            justify-content:flex-start; 
+        }
+
+         .justify-content-flexend {
+            /*默认靠右对齐*/
+            justify-content:flex-end; 
+        }
+
+
+         .justify-content-flexcenter {
+            /*默认中心对齐*/
+            justify-content:center; 
+        }
+
+
+         .justify-content-spacebetween {
+            /*默认靠左对齐*/
+            justify-content:space-between; 
+        }
+
+
+         .justify-content-spacearound {
+            /*默认靠左对齐*/
+            justify-content:space-around; 
+        }
+        /*设置父盒子侧轴子元素对齐方式*/
+        .align-items-flex-start {
+            align-items:flex-start;
+        }
+
+        .align-items-flex-end {
+            align-items:flex-end;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .align-items-baseline {
+            align-items: baseline;
+        }
+
+        .align-items-stretch {
+            align-items:stretch;
+        }
+    </style>
+</head>
+<body>
+        <div class="wrap">
+            <div class="hd">设置弹性盒子的主轴方向:row-reverse</div>
+
+            <div class="bd row-reverse">
+                    <div class="child">1</div>
+                    <div class="child">2</div>
+                    <div class="child">3</div>
+                    <div class="child">4</div>
+                    <div class="child">5</div>
+                    <div class="child">6</div>
+
+            </div>
+        </div>
+
+          <div class="wrap">
+                <div class="hd">设置弹性盒子的主轴方向:column</div>
+
+                <div class="bd column">
+                    <div class="child">1</div>
+                    <div class="child">2</div>
+                    <div class="child">3</div>
+                    <div class="child">4</div>
+                    <div class="child">5</div>
+                    <div class="child">6</div>
+
+                </div>
+        </div>
+
+
+        
+        <div class="wrap">
+                <div class="hd">设置弹性盒子的主轴方向:column</div>
+
+                <div class="bd column-reverse">
+                    <div class="child">1</div>
+                    <div class="child">2</div>
+                    <div class="child">3</div>
+                    <div class="child">4</div>
+                    <div class="child">5</div>
+                    <div class="child">6</div>
+
+                </div>
+        </div>
+
+             
+        <div class="wrap">
+                <div class="hd">设置弹性盒子的是否换行：flex-wrap</div>
+
+                <div class="bd flex-wrap">
+                    <div class="child">1</div>
+                    <div class="child">2</div>
+                    <div class="child">3</div>
+                    <div class="child">4</div>
+                    <div class="child">5</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                    <div class="child">6</div>
+                     
+
+                </div>
+        </div>
+
+        <!--设置父盒子的子元素排列-->
+        
+        
+        <div class="wrap">
+                <div class="hd">设置父盒子主轴子元素的对齐方式:flex-start</div>
+
+                <div class="bd justify-content-flexstart">
+                    <div class="child">1</div>
+                    <div class="child">2</div>
+                    <div class="child">3</div>
+                    <div class="child">4</div>
+                    <div class="child">5</div>
+                    <div class="child">6</div>
+
+                </div>
+        </div>
+
+
+        <div class="wrap">
+                <div class="hd">设置父盒子主轴子元素的对齐方式:flex-end</div>
+
+                <div class="bd justify-content-flexend">
+                    <div class="child">1</div>
+                    <div class="child">2</div>
+                    <div class="child">3</div>
+                    <div class="child">4</div>
+                    <div class="child">5</div>
+                    <div class="child">6</div>
+
+                </div>
+        </div>
+
+
+        <div class="wrap"> 
+                <div class="hd">设置父盒子主轴子元素的对齐方式:flex-center</div>
+
+                <div class="bd justify-content-flexcenter">
+                    <div class="child">1</div>
+                    <div class="child">2</div>
+                    <div class="child">3</div>
+                    <div class="child">4</div>
+                    <div class="child">5</div>
+                    <div class="child">6</div>
+
+                </div>
+        </div>
+
+        
+        <div class="wrap"> 
+                <div class="hd">设置父盒子主轴子元素的对齐方式:space-around</div>
+
+                <div class="bd justify-content-spacearound">
+                    <div class="child">1</div>
+                    <div class="child">2</div>
+                    <div class="child">3</div>
+                    <div class="child">4</div>
+                    <div class="child">5</div>
+                    <div class="child">6</div>
+
+                </div>
+        </div>
+        <div class="wrap"> 
+                <div class="hd">设置父盒子主轴子元素的对齐方式:space-between</div>
+
+                <div class="bd justify-content-spacebetween">
+                    <div class="child">1</div>
+                    <div class="child">2</div>
+                    <div class="child">3</div>
+                    <div class="child">4</div>
+                    <div class="child">5</div>
+                    <div class="child">6</div>
+
+                </div>
+        </div>
+
+        <div class="wrap"> 
+                <div class="hd">设置父盒侧轴子元素的对齐方式:flex-start</div>
+
+                <div class="bd align-items-flex-start" style="height:200px">
+                    <div class="child" style="height:100px">1</div>
+                    <div class="child" style="height:120px">1</div>
+                    <div class="child" style="height:10px">1</div>
+                    <div class="child" style="height:130px">1</div>
+                    <div class="child" style="height:150px">1</div>
+                   
+
+                </div>
+        </div>
+
+        <h3>设置多行子元素对齐方式</h3>
+        <div class="wrap"> 
+                <div class="hd">align-content设置多行子元素对齐方式:flex-start</div>
+
+                <div class="bd align-items-flex-start" style="height:200px">
+                    <div class="child" style="height:100px">1</div>
+                    <div class="child" style="height:120px">1</div>
+                    <div class="child" style="height:10px">1</div>
+                    <div class="child" style="height:130px">1</div>
+                    <div class="child" style="height:150px">1</div>
+                   
+
+                </div>
+        </div>
+
+
+        <h3>6.设置子盒子的排序</h3>
+        <hr>
+        <div class="wrap"> 
+                <div class="hd">order设置子盒子的排序</div>
+
+                <div class="bd justify-content-spacebetween">
+                    <div class="child" style="order:5">1</div>
+                    <div class="child" style="order:4">2</div>
+                    <div class="child" style="order:3">3</div>
+                    <div class="child" style="order:2">4</div>
+                    <div class="child" style="order:1">5</div>
+                     
+
+                </div>
+        </div>
+
+        <h3>7.设置子盒子放大的比例</h3>
+        <hr>
+        <div class="wrap"> 
+                <div class="hd">flex-grow设置子盒子放大的比例</div>
+
+                <div class="bd justify-content-spacebetween">
+                    <div class="child" style="flex:1">1</div>
+                    <div class="child" style="flex:2">2</div>
+                    <div class="child" style="flex:4">3</div>
+             
+                     
+
+                </div>
+        </div>
+
+        <h3>7.设置子盒子的缩小比例</h3>
+        <hr>
+        <div class="wrap"> 
+                <div class="hd">flex-shrink设置子盒子缩小的比例</div>
+
+                <div class="bd ">
+                    <div class="child" style="flex-shrink:1">1</div>
+                    <div class="child" style="flex-shrink:2">2</div>
+                    <div class="child" style="flex-shrink:4">3</div>
+             
+                     
+
+                </div>
+        </div>
+</body>
+</html>
