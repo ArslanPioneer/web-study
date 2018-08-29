@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //call, apply方法区别是,从第二个参数起, call方法参数将依次传递给借用的方法作参数, 而apply直接将这些参数放到一个数组中再传递, 最后借用方法的参数列表是一样的.
+        function print (a,b,c,d) {
+            alert(a+b+c+d);
+        }
+
+        function example (a,b,c,d) {
+            //利用call方式借用print,参数显示打散传递
+            print.call(this,a,b,c,d);
+            //apply方式借用javascript方法本身有的arguments数组
+            print.apply(this,arguments);
+            //或者封装成数组
+            print.apply(this,[a,b,c,d]);
+        }
+        
+        example("背","光","脚","本");
+    
+    </script>
+</body>
+</html>

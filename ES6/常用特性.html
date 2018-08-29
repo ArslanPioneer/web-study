@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //定义函数
+        //es6写法
+        var human1={
+            breathe(name) {
+                console.log(name + 'is breathing...');
+                human.breathe('jarson');
+            }
+        }
+        //原生js
+        var human2={
+            breathe: function(name) {
+                console.log(name+ 'is breathing...');
+                human.breathe('jarson');
+            }
+        }
+
+        //创建类
+        class Human1 {
+            constructor(name) {
+                this.name=name;
+            }
+            breathe(){
+                    console.log(this.name+ 'is breathing');
+                    var man =new Human("jarson");
+                    man.breathe();
+            }
+        }
+
+        class Man extends Human1 {
+            constructor(name,sex){
+                super(name);
+                this.sex=sex;
+            }
+            info() {
+                console.log(this.name+'is' +this.sex);
+                var xx=new Man('jarson','boy');
+            }
+        }
+
+        //模块
+        //箭头函数
+        //ES6中新增的箭头操作符=>简化了函数的书写。操作符左边为输入的参数，而右边则是进行的操作以及返回的值，这样的写法可以为我们减少大量的代码，看下面的实例：
+        let arr=[1,34,21,23,15,23];
+        arr.forEach((item,i) => console.log(item,i));
+        
+        //字符串模板
+        //ES6中允许使用反引号 ` 来创建字符串，此种方法创建的字符串里面可以包含由美元符号加花括号包裹的变量${vraible}
+        let num=Math.random();
+        console.log(`your num is ${num}`);
+        //解构
+        function getVal() {
+            return [1,2];
+            var [x,y] = getVal();
+            console.log('x:'+x+',y:'+y);
+        }
+        //proxy 监听对象
+        //定义被监听的目标对象
+        let engineer = {
+            name: 'joe Sixpack',salary: 50
+        };
+        //定义处理程序
+        let interceptor = {
+            set(receiver,property,value) {
+                console.log(property,'is changed to',value);
+                receiver[property]=value;
+            }
+        };
+
+        //创建代理以进行侦听
+        engineer =new Proxy(engineer,interceptor);
+        engineer.salary=700;
+
+    
+    </script>
+</body>
+</html>
