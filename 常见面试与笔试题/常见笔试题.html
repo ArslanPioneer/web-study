@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+         //1.基本数据类型和引用类型
+         //Number String Boolean Null Undefined
+         //Array Object
+         //2.内置对象
+         //Object Number String Boolean Array Function Date RegExp
+         console.log(typeof null); //object
+         console.log(typeof undefined); //undefined
+         console.log(isNaN(1+undefined)); //true
+         console.log(isNaN(1+null)) //false
+         console.log(null === undefined); //false
+         console.log(null == undefined);    //true
+         console.log(null === null); //true
+         console.log(null == null ); //true
+         console.log(Symbol("foo") === Symbol("foo")); //false
+
+         function square(x) {
+             return x*x;
+         }
+         square(5);
+
+        //  function square(x) {
+        //      var y = x*x ;
+        //  }
+        //  square(x)
+     </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let和const  
+        function func(randomize) {
+            if(randomize) {
+                let x = Math.random();
+                var y = Math.random();
+            }
+
+            //块级作用域,这里的x与上述的x没有任何关系
+            let  x = 5;
+
+            return y;
+        }
+
+        const a= 1233;
+        console.log(a);
+    </script>
+</body>
+</html>

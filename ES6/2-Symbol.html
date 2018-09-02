@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Symbol是ES6新的原始数据类型，作为独有ID使用的字符
+        const COLOR_RED = Symbol();
+        const COLOR_ORANGE = Symbol();
+
+        console.log('each Symbol() is always unique:', Symbol() === Symbol());
+        
+        const MY_KEY = Symbol();
+        let obj={};
+        obj[MY_KEY]=123;
+        console.log('my dynamic object method: ',obj[MY_KEY]);
+        
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="actions">
+            <button @click="toggleModal('new-item')">添加列表</button>
+            <button @click="toggleModal('confirm')">删除列表</button>
+        </div>
+
+        <modal ref="new-item">
+            <p>添加新的列表</p>
+            <div slot="actions">
+                <button>保存</button>
+                <button>取消</button>
+            </div>
+        </modal>
+
+        <modal ref="confirm">
+            <p>删除列表?</p>
+            <div slot="actions">
+                <button>删除</button>
+                <button>取消</button>
+            </div>
+        </modal>
+
+        <script type="x-template" >
+            
+        
+        </script>
+    </div>
+</body>
+</html>

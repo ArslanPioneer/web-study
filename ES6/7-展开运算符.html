@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.函数调用中使用展开运算符
+        // function test(a,b,c) {
+
+        // }
+
+        // var args = [0,1,2];
+        // test.apply(null,args);
+        // function test (a,b,c) {
+
+        // }
+
+        // var args=[0,1,2];
+        // test(...args);
+        //2.合并数组
+        // var arr1=['1','2'];
+        // var arr2=['one',...arr1,'four','five'];
+        // console.log(arr2);
+
+        //3.拷贝数组
+        var arr = [1,2,3];
+        var arr2 = [...arr];
+        arr2.push(4);
+        console.log(arr2);
+
+        //4.使用math对象里的相关函数
+        let numbers =[9,4, 7,1];
+        console.log(Math.min(...numbers));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var events = [0,2,4];
+        //以下两种写法效果相同
+        var odds = events.map(v => v+1);
+        var odds = events.map(function(v) {return v+1});
+    
+        //以下两种写法效果相同
+        var nums = events.map((v,i)=> v+i);
+        var nums = events.map(function(v,i) {return v+i})
+
+        var fives = [];
+        nums.forEach( v=> {
+            if( v % 5 === 0) fives.push(v);
+        });
+
+        var bob = {
+            _name: 'Bob',
+            _friends: [],
+            printfriends() {
+                this._friends.forEach(f=> {
+                    console.log(this._name + 'knows' + f);
+                })
+            }
+        };
+
+        
+
+
+    </script>
+</body>
+</html>
