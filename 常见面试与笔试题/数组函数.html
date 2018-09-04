@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //为每个现有的东西返回一个新东西：map
+        const originalArray = [1,2,3,8];
+        const newArray = originalArray.map(item => item*2)
+        console.log(newArray);
+        //返回一个新数组，只包含一些符合条件的现有数组项filter
+        const array = originalArray.filter(item => item >5);
+        console.log(array);
+        //只返回一个新东西:reduce
+        const array1 = ["allice","bob","bob","charlie"]
+        const numberOfBobs =array1.reduce((num,item) => {
+            if(item === "bob") {
+                return num+1;
+            }
+            else {
+                return num;
+            }
+        },0)
+
+        console.log(numberOfBobs);
+
+        //对数组中每个值做一些事情但不返回任何值: foreach()
+        const array2 = [1,2,3];
+        array2.forEach(function(item) {
+            doSomething(item);
+        });
+    </script>
+</body>
+</html>

@@ -7,6 +7,20 @@
     <title>javascript实现继承的六种方式</title>
 </head>
 <body>
+    <script>
+        function Person(name) {
+            if(name !== undefined){
+                this.name = name;
+            }
+            else {
+                this.name ="StrayBugs";
+            }
+            this.age = 22;
+        }
+        Person.prototype.sayName = function() {
+            alert(this.name);
+        };
     
+    </script>
 </body>
 </html>

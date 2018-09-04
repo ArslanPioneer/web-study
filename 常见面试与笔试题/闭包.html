@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //一个标准的函数示例
+        function outerFunction() {
+            const outer = `I see the outer variable`;
+            function innerFunction() {
+                console.log(outer)
+            }
+
+            return innerFunction
+        }
+        outerFunction()();
+        //1.使用闭包控制副作用
+        function perpareCake (flavor) {
+            debugger
+            return function () {
+                setTimeout(() => console.log(`make a ${flavor} cake!`,1))
+            }
+        }
+
+        const makeCakeLater = perpareCake('banana');
+
+        //2.使用闭包创建私有变量
+        function serect (serectCode) {
+            return  {
+                saySerectCode () {
+                    console.log(serectCode)
+                }
+            }
+        }
+
+        const theSerect = serect('css Tricks is amazing');
+        theSerect.saySerectCode();
+    </script>
+</body>
+</html>

@@ -8,30 +8,43 @@
 </head>
 <body>
     <script>
-        class Person {
-            constructor(name,age) {
-                this.name = name;
-                this.age = age;
-            }
-        }
+     //ES5
+     function Point(x,y) {
+         this.x = x;
+         this.y = y;
+     }
 
-        class Employee extends Person {
-            constructor(name,age) {
-                super(name,age);
+     Point.prototype.toString = function() {
+         return '(' + this.x + ',' + this.y + ')';
+     };
 
-            }
+     var p = new Point(1,2);
+    //ES6
+     class People {
+         constructor(name,age) {
+             this.name = name;
+             this.age = age;
+         }
+         //公有方法
+         foo (baz) {
+             this._bar(baz);
+         }
+         //私有方法
+         _bar(baz) {
+             return this.snaf = baz;
+         }
+         get prop() {
+             return 'getter';
+         }
+         set prop(value) {
+             console.log('setter:' + value);
+         }
+     }
 
-            setJob(title) {
-                this.job = title;
-            }
+     let inst = new MyClass();
 
-            static greeting () {
-                return 'Hello world';
-            }
-
-            //同时类智能让我们创建静态仿
-        }
-    
+     inst.prop = 123;
+     inst.prop 
     </script>
 </body>
 </html>
