@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原型规则和示例</title>
+</head>
+<body>
+    <script>
+         //1.所有的引用类型(数组、对象、函数)都具有对象特性即可自由扩展属性(除了"null"意外)
+         //2.所有的引用类型(数组、对象、函数)都有一个_proto_(隐式原型)属性,属性值是一个普通的对象
+         //3.所有的函数都有一个prototype(显示原型)属性,属性值也是一个普通的对象
+         //4.所有的引用类型(数组、对象、函数),_proto_属性值指向它的构造函数的prototype属性值
+         //5.当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会去它的_proto_(即它的构造函数的prototype)中寻找
+         var Person = function (name) {
+             this.name = name;
+         };
+         Person.prototype.getName = function () {
+             return this.name;
+         }
+         var person1 = new Person('mick');
+         person1.getName();
+    </script>
+</body>
+</html>
