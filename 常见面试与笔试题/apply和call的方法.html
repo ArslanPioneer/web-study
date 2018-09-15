@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Call和apply的方法:改变this的指向</title>
+</head>
+<body>
+    <script>
+        function fruits() {
+
+        }
+        fruits.prototype = {
+            color:"red",
+            say: function() {
+                console.log("my color is "+this.color);
+            }
+        }
+
+        var apple = new fruits;
+        apple.say();
+        
+        banana = {
+            color: "yellow"
+        }
+
+        apple.say.call(banana);
+
+        var arr1=[12,"foo",{name:"Joe"}, -2458];
+        var arr2=["Doe",555,100];
+ 
+    </script>
+</body>
+</html>
