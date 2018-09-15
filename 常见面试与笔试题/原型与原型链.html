@@ -13,9 +13,27 @@
         //对象包含隐式原型[[prototype]],构造函数包含显示原型
         //隐式原型[[prototype]]指向显示原型protype
         //显示原型prototype包含constructor属性，该属性指向构造函数
-        
-    
-    
+        function A() {}
+        A.prototype.say =function(){
+            console.log("say");
+        }
+        Object.prototype.talk = function() {
+            console.log("talk");
+        }
+        var a = new A();
+        a.say();
+        a.talk();
+
+        var newTest = function(func) {
+            var o = Object.create(func.prototype);
+            var k = func.call(o);
+            if(typeof k === 'object') {
+                return k
+            }
+            else {
+                return 0
+            }
+        }
     </script>
 </body>
 </html>

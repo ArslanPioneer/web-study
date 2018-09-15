@@ -8,13 +8,27 @@
 </head>
 <body>
     <script>
-        //1.字面量
-        var o1 = {name:'o1'};
-        var o2 =new Object('o2')
-        //2.构造函数
-        var M = function(name) {this.name = name}
-        var o3 = new M('o3');
-        //3.通过Object.create
+        // //第一种方式：字面量
+        // var o1 = {name:'o1'};
+        // //第二种方式：构造函数
+        // var M = function(name) {this.name = name}
+        // var o2 = new M('o3');
+        // //第三种方式：通过Object.create
+        // var p = {name: 'p'};
+        // var o3 = Object.create(p);
+
+        //1.工厂模式
+        function createPerson(name,age,job) {
+            var o = new Object();
+            o.name = name;
+            o.age = age;
+            o.sayName = function () {
+                alert(this.name);
+            };
+            return o;
+        }
+
+        //2.构造函数模式
         
     </script>
 </body>
