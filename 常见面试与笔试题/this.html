@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //this允许复用函数使用不同的上下文,换句话说this关键字允许在调用函数或方法时决定哪个对象是焦点
+        function greet(name) {
+                alert(`Hello, my name is ${name}`)
+            }
+        const user = {
+                name: 'Tyler',
+                age: 27,
+                greet() {
+                    alert(`Hello, my name is ${this.name}`)
+                },
+                mother: {
+                    name: 'Stacey',
+                    greet() {
+                        alert(`Hello, my name is ${this.name}`)
+                    }
+                }
+            }
+        //1.隐式绑定
+        user.greet();
+        user.mother.greet();
+        //2.显示绑定
+        function gre() {
+                alert(`Hello, my name is ${this.name}`)
+            }
+
+            const use= {
+                name: 'Ty',
+                age: 27,
+            }
+        gre.call(use);
+        //3.new绑定
+        function User(name, age) {
+                /*
+                  JavaScript 会在底层创建一个新对象 `this`，它会代理不在 User 原型链上的属性。
+                  如果一个函数用 new 关键字调用，this 就会指向解释器创建的新对象。
+                */
+                this.name = name
+                this.age = age
+            }
+    
+        const me = new User('Tyler', 27)
+       //4.window绑定
+       function sayAge() {
+            console.log(`My age is ${this.age}`)
+        }
+
+        const user = {
+            name: 'Tyler',
+            age: 27
+        }
+    </script>
+</body>
+</html>

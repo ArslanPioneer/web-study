@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var stringValue= 'hello world';
+        //1.chartAt()方法以单字符串的形式返回给指定位置的那个字符
+        console.log(stringValue.charAt(1));
+        //charCodeAt()方法输出字符编码
+        console.log(stringValue.charCodeAt(1));
+        //2.字符串操作方法
+        var a="abc";
+        var b="def";
+        console.log(a.concat(b)) ;
+        //3.slice() substring() substr()
+        console.log(stringValue.slice(3));
+        console.log(stringValue.substring(3));
+        console.log(stringValue.slice(3,7));
+        console.log(stringValue.slice(3,7));
+        //3.字符串位置方法
+        console.log(stringValue.indexOf("o"));
+        console.log(stringValue.lastIndexOf("o"));
+    </script>
+</body>
+</html>
