@@ -1,0 +1,15 @@
+body {
+    color: inherit;
+}
+.headerTitle {
+    text-align: center; 
+    margin: 0 auto;
+    font-size:63px;
+}
+.headerSubtitle {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 32px;
+    font-weight: 500;
+    font-style: italic;
+}
