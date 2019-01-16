@@ -1,15 +1,60 @@
-body {
-    color: inherit;
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: row;
 }
-.headerTitle {
-    text-align: center; 
-    margin: 0 auto;
-    font-size:63px;
+.header-left {
+    display: flex;
+    flex-direction: row;
+    margin-left: 24px;
 }
-.headerSubtitle {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 32px;
-    font-weight: 500;
-    font-style: italic;
+.header-index {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.number {
+    font-size: 35px;
+}
+
+.index {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 800;
+}
+
+.line {
+    height: 45px;
+    /* line-height: 60px; */
+    margin-right: 14px;
+    margin-left: 14px;
+    border-left:1px solid black;
+}
+
+.header-date {
+    display: flex;
+    flex-direction: column;
+}
+.month {
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 6px;
+}
+.year {
+    font-size: 24px;
+}
+
+.header-right {
+    display: flex;
+    margin-right: 15px;
+}
+.heart {
+    width: 32px;
+    height: 28px;
+}
+.like {
+    font-size: 12px;
+    margin-left: 5px;
 }
