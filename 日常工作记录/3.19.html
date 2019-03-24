@@ -7,31 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>单行文本与多行文本省略</title>
     <style>
-        .single {
-            display: inline-block;
+        p {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            font-size: 14px;
-            width: 150px;
+            font-size: 16px;
+            width: 130px;
         }
 
         .box {
-            width: 400px;
+            width: 200px;
             display: -webkit-box;
-            -webkit-line-clamp: 3;
+            /* 显示几行 */
+            -webkit-line-clamp: 4;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
-
     </style>
 </head>
 
 <body>
-    <p class="single">春江花月夜，人生真是寂寞如雪啊！何须忘了这山河！</p>
+    <p>春江潮水连海平，海上明月共潮生。</p>
     <div class="box">
-        【大众点评与美团网合并
-        王兴张涛担任联席CEO】大众点评网与美团网今天联合发布声明，宣布达成战略合作，双方已共同成立一家新公司。新公司将实施Co-CEO制度，美团CEO王兴和大众点评CEO张涛将同时担任联席CEO和联席董事长，重大决策将在联席CEO和董事会层面完成。
+        春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。
+月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。
+江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。
+ 
     </div>
 </body>
 
