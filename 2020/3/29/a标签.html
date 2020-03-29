@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="http://www.baidu.com" id="test"> Click Me </a>
+    <script type="text/javascript">
+      //a标签阻止默认事件即点击跳转，但保留右键通过新链接或者窗口打开
+      var test = document.getElementById("test");
+      function stopDefault(e) {
+        if (e && e.preventDefault) e.preventDefault();
+        else window.event.returnValue = false;
+      }
+      test.onclick = function(e) {
+        stopDefault(e);
+      };
+    </script>
+  </body>
+</html>

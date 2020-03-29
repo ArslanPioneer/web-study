@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //MVVM数据双向绑定
+        //实现一个监听器Observer 用来劫持并监听所有属性
+        //实现一个订阅器Dep,用来收集订阅者,对监听器Observer和订阅者Watcher进行统一管理
+        //实现一个订阅者Watcher,可以收到属性的变化通知并执行相应的方法
+        //实现一个解析器Compile,可以解析每个节点的相关指令
+
+        // let person ={
+        //     name:'tom',
+        //     age:15
+        // }
+
+        function observable(obj){
+            if(!obj || typeof obj !== 'object'){
+                return
+            }
+
+            let keys =Object.keys(obj)
+
+            keys.forEach(key =>{
+                defineReactive(obj,key,obj[key])
+            })
+
+            return obj
+        }
+
+        function defineReactive(obj,key,val){
+            Object.defineProperty(obj,key,{
+                get(){
+                    console.log(`${key}属性被读取了`)
+                },
+                set(newVal){
+                    console.log(`${key}属性被修改了`)
+                }
+            })
+        }
+
+        let person = observable({
+            name:'tom',
+            age:15
+        })
+
+        //发布-订阅设计模式
+        
+    </script>
+</body>
+</html>
