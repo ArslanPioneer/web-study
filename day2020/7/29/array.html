@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const a = [2, 4, 8, 9];
+      const findValue = a.find((i) => i > 5);
+      const findErrorValue = a.find((i) => i > 20);
+      console.log(findValue); // 8
+      console.log(findErrorValue); //undefined
+      console.log(a.findIndex((i) => i > 5)); //2
+      console.log(a.findIndex((i) => i > 20)); //-1
+    </script>
+  </body>
+</html>

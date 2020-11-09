@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //对象具有[[prototype]]属性，函数具有prototype属性
-        //构造函数通过new关键字创建对象
-        //对象包含隐式原型[[prototype]],构造函数包含显示原型
-        //隐式原型[[prototype]]指向显示原型protype
-        //显示原型prototype包含constructor属性，该属性指向构造函数
-        function A() {}
-        A.prototype.say =function(){
-            console.log("say");
-        }
-        Object.prototype.talk = function() {
-            console.log("talk");
-        }
-        var a = new A();
-        a.say();
-        a.talk();
+      //对象具有[[prototype]]属性，函数具有prototype属性
+      //构造函数通过new关键字创建对象
+      //对象包含隐式原型[[prototype]],构造函数包含显示原型
+      //隐式原型[[prototype]]指向显示原型protype
+      //显示原型prototype包含constructor属性，该属性指向构造函数
+      function A() {}
+      A.prototype.say = function () {
+        console.log("say");
+      };
+      Object.prototype.talk = function () {
+        console.log("talk");
+      };
+      var a = new A();
+      a.say();
+      a.talk();
 
-        var newTest = function(func) {
-            var o = Object.create(func.prototype);
-            var k = func.call(o);
-            if(typeof k === 'object') {
-                return k
-            }
-            else {
-                return 0
-            }
+      var newTest = function (func) {
+        var o = Object.create(func.prototype);
+        var k = func.call(o);
+        if (typeof k === "object") {
+          return k;
+        } else {
+          return 0;
         }
+      };
+
+      function Dog() {}
+
+      Dog.prototype.name = "kate";
+      var dog = new Dog();
+      dog.name = "jack";
+      console.log(dog.name);
+      delete dog.name;
+      console.log(dog.name);
     </script>
-</body>
+  </body>
 </html>

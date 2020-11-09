@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            width: 500px;
+            height: 500px;
+            /* flex-direction: row-reverse; */
+            justify-content: flex-start;
+            align-items: center;
+            background-color: yellow;
+        }
+
+        .box1 {
+            
+            width: 100px;
+            height: 100px;
+            margin: 10px 10px;
+            background-color: red;
+        }
+
+        .box2 {
+            /*数值越小排列越靠前默认为0*/
+            /* order: 2; */
+            /*放大倍数*/
+            /* flex-grow: 2; */
+             
+            width: 100px;
+            height: 100px;
+            margin: 10px 10px;
+            background-color: red;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            margin: 10px 10px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+</body>
+</html>

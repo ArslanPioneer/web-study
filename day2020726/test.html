@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .box {
+        width: 0;
+        height: 0;
+        border-top: 100px solid red;
+        border-left: 100px solid green;
+        border-bottom: 100px solid yellow;
+        border-right: 100px solid pink;
+      } */
+      .boxContainer {
+        width: 100px;
+        height: 100px;
+        margin: 500px 500px;
+      }
+      .boxContainer:hover .box {
+        display: block;
+      }
+      .box {
+        position: relative;
+        display: none;
+        bottom: 245px;
+        width: 300px;
+        height: 100px;
+        border: 6px solid #555;
+        border-radius: 20px;
+        margin: 100px auto;
+        background-color: blanchedalmond;
+      }
+      .box::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 101px;
+        left: 30px;
+        border-top: 20px solid #555;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+      }
+      .box::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 94px;
+        left: 30px;
+        border-top: 20px solid blanchedalmond;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxContainer">
+      《道德经》
+      <div class="box">
+        道可道，非常道。名可名，非常名。
+      </div>
+    </div>
+  </body>
+</html>

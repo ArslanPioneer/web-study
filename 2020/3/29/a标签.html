@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    .click {
+      text-decoration: none;
+    }
+  </style>
   <body>
-    <a href="http://www.baidu.com" id="test"> Click Me </a>
+    <button>
+      <a href="http://www.baidu.com" id="test" class="click"> Click Me </a>
+    </button>
     <script type="text/javascript">
       //a标签阻止默认事件即点击跳转，但保留右键通过新链接或者窗口打开
       var test = document.getElementById("test");

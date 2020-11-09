@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .margin {
+        margin: 10px 10px;
+      }
+      .box {
+        width: 0;
+        height: 0;
+        border: 100px solid #ccc;
+      }
+      .colorBox {
+        width: 0;
+        height: 0;
+        border-top: 100px solid red;
+        border-left: 100px solid green;
+        border-bottom: 100px solid yellow;
+        border-right: 100px solid pink;
+      }
+      .bottomTriangle {
+        width: 0;
+        height: 0;
+        border-top: 100px solid red;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+      }
+      .topTriangle {
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid pink;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+      }
+      .leftTriangle {
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid transparent;
+        border-left: 100px solid green;
+        border-top: 100px solid transparent;
+      }
+      .rightTriangle {
+        width: 0;
+        height: 0;
+        border-right: 100px solid yellow;
+        border-top: 100px solid transparent;
+        border-bottom: 100px solid transparent;
+      } */
+      .box {
+        position: relative;
+        display: none;
+        width: 100px;
+        height: 20px;
+        border: 1px solid #666;
+        border-radius: 5px;
+      }
+      .box::before {
+        position: absolute;
+        content: "";
+        left: 20px;
+        bottom: -10px;
+        border-top: 10px solid #666;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+      .box::after {
+        position: absolute;
+        content: "";
+        left: 20px;
+        bottom: -9px;
+        border-top: 10px solid #ffffff;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+      /* .boxLeft {
+        width: 50px;
+        height: 20px;
+        position: relative;
+        border: 1px solid royalblue;
+        border-radius: 5px;
+      }
+      .boxLeft::before {
+        content: "";
+        position: absolute;
+        border-left: 5px solid royalblue;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        top: 4px;
+        right: -6px;
+      }
+      .boxLeft::after {
+        content: "";
+        position: absolute;
+        border-left: 5px solid #ffffff;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        top: 4px;
+        right: -5px;
+      } */
+      /* .boxLeft::after {
+        content: "";
+        border-left: 10px ;
+      } */
+      .text {
+        position: relative;
+      }
+      .text::hover .box {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box"></div>
+    <div class="margin"></div>
+    <div class="colorBox"></div>
+    <div class="margin"></div>
+    <div class="bottomTriangle"></div>
+    <div class="margin"></div>
+    <div class="topTriangle"></div>
+    <div class="leftTriangle"></div>
+    <div class="rightTriangle"></div> -->
+    <div class="text">
+      触摸
+      <div class="box">
+        文字
+      </div>
+    </div>
+
+    <!-- <div class="boxLeft"></div> -->
+  </body>
+</html>
